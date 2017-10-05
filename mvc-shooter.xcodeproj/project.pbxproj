@@ -1,0 +1,445 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D2F345791F86AF1500ED4E6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F345781F86AF1500ED4E6A /* AppDelegate.swift */; };
+		D2F3457B1F86AF1500ED4E6A /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D2F3457A1F86AF1500ED4E6A /* GameScene.sks */; };
+		D2F3457D1F86AF1500ED4E6A /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = D2F3457C1F86AF1500ED4E6A /* Actions.sks */; };
+		D2F3457F1F86AF1500ED4E6A /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F3457E1F86AF1500ED4E6A /* GameScene.swift */; };
+		D2F345811F86AF1500ED4E6A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F345801F86AF1500ED4E6A /* GameViewController.swift */; };
+		D2F345861F86AF1500ED4E6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2F345851F86AF1500ED4E6A /* Assets.xcassets */; };
+		D2F345891F86AF1500ED4E6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2F345871F86AF1500ED4E6A /* LaunchScreen.storyboard */; };
+		D2F345941F86AF1500ED4E6A /* mvc_shooterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F345931F86AF1500ED4E6A /* mvc_shooterTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D2F345901F86AF1500ED4E6A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2F3456D1F86AF1500ED4E6A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2F345741F86AF1500ED4E6A;
+			remoteInfo = "mvc-shooter";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D2F345751F86AF1500ED4E6A /* mvc-shooter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mvc-shooter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2F345781F86AF1500ED4E6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D2F3457A1F86AF1500ED4E6A /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		D2F3457C1F86AF1500ED4E6A /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		D2F3457E1F86AF1500ED4E6A /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		D2F345801F86AF1500ED4E6A /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		D2F345851F86AF1500ED4E6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D2F345881F86AF1500ED4E6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D2F3458A1F86AF1500ED4E6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2F3458F1F86AF1500ED4E6A /* mvc-shooterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mvc-shooterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2F345931F86AF1500ED4E6A /* mvc_shooterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mvc_shooterTests.swift; sourceTree = "<group>"; };
+		D2F345951F86AF1500ED4E6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2F345721F86AF1500ED4E6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2F3458C1F86AF1500ED4E6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D2F3456C1F86AF1500ED4E6A = {
+			isa = PBXGroup;
+			children = (
+				D2F345771F86AF1500ED4E6A /* mvc-shooter */,
+				D2F345921F86AF1500ED4E6A /* mvc-shooterTests */,
+				D2F345761F86AF1500ED4E6A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D2F345761F86AF1500ED4E6A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2F345751F86AF1500ED4E6A /* mvc-shooter.app */,
+				D2F3458F1F86AF1500ED4E6A /* mvc-shooterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D2F345771F86AF1500ED4E6A /* mvc-shooter */ = {
+			isa = PBXGroup;
+			children = (
+				D2F345781F86AF1500ED4E6A /* AppDelegate.swift */,
+				D2F3457A1F86AF1500ED4E6A /* GameScene.sks */,
+				D2F3457C1F86AF1500ED4E6A /* Actions.sks */,
+				D2F3457E1F86AF1500ED4E6A /* GameScene.swift */,
+				D2F345801F86AF1500ED4E6A /* GameViewController.swift */,
+				D2F345851F86AF1500ED4E6A /* Assets.xcassets */,
+				D2F345871F86AF1500ED4E6A /* LaunchScreen.storyboard */,
+				D2F3458A1F86AF1500ED4E6A /* Info.plist */,
+			);
+			path = "mvc-shooter";
+			sourceTree = "<group>";
+		};
+		D2F345921F86AF1500ED4E6A /* mvc-shooterTests */ = {
+			isa = PBXGroup;
+			children = (
+				D2F345931F86AF1500ED4E6A /* mvc_shooterTests.swift */,
+				D2F345951F86AF1500ED4E6A /* Info.plist */,
+			);
+			path = "mvc-shooterTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D2F345741F86AF1500ED4E6A /* mvc-shooter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2F345981F86AF1500ED4E6A /* Build configuration list for PBXNativeTarget "mvc-shooter" */;
+			buildPhases = (
+				D2F345711F86AF1500ED4E6A /* Sources */,
+				D2F345721F86AF1500ED4E6A /* Frameworks */,
+				D2F345731F86AF1500ED4E6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "mvc-shooter";
+			productName = "mvc-shooter";
+			productReference = D2F345751F86AF1500ED4E6A /* mvc-shooter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D2F3458E1F86AF1500ED4E6A /* mvc-shooterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2F3459B1F86AF1500ED4E6A /* Build configuration list for PBXNativeTarget "mvc-shooterTests" */;
+			buildPhases = (
+				D2F3458B1F86AF1500ED4E6A /* Sources */,
+				D2F3458C1F86AF1500ED4E6A /* Frameworks */,
+				D2F3458D1F86AF1500ED4E6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D2F345911F86AF1500ED4E6A /* PBXTargetDependency */,
+			);
+			name = "mvc-shooterTests";
+			productName = "mvc-shooterTests";
+			productReference = D2F3458F1F86AF1500ED4E6A /* mvc-shooterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D2F3456D1F86AF1500ED4E6A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Josef Dolezal";
+				TargetAttributes = {
+					D2F345741F86AF1500ED4E6A = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					D2F3458E1F86AF1500ED4E6A = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D2F345741F86AF1500ED4E6A;
+					};
+				};
+			};
+			buildConfigurationList = D2F345701F86AF1500ED4E6A /* Build configuration list for PBXProject "mvc-shooter" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D2F3456C1F86AF1500ED4E6A;
+			productRefGroup = D2F345761F86AF1500ED4E6A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2F345741F86AF1500ED4E6A /* mvc-shooter */,
+				D2F3458E1F86AF1500ED4E6A /* mvc-shooterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D2F345731F86AF1500ED4E6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2F3457B1F86AF1500ED4E6A /* GameScene.sks in Resources */,
+				D2F345861F86AF1500ED4E6A /* Assets.xcassets in Resources */,
+				D2F345891F86AF1500ED4E6A /* LaunchScreen.storyboard in Resources */,
+				D2F3457D1F86AF1500ED4E6A /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2F3458D1F86AF1500ED4E6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2F345711F86AF1500ED4E6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2F3457F1F86AF1500ED4E6A /* GameScene.swift in Sources */,
+				D2F345811F86AF1500ED4E6A /* GameViewController.swift in Sources */,
+				D2F345791F86AF1500ED4E6A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2F3458B1F86AF1500ED4E6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2F345941F86AF1500ED4E6A /* mvc_shooterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D2F345911F86AF1500ED4E6A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2F345741F86AF1500ED4E6A /* mvc-shooter */;
+			targetProxy = D2F345901F86AF1500ED4E6A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D2F345871F86AF1500ED4E6A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2F345881F86AF1500ED4E6A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D2F345961F86AF1500ED4E6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D2F345971F86AF1500ED4E6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D2F345991F86AF1500ED4E6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "mvc-shooter/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.josefdolezal.mvc-shooter";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D2F3459A1F86AF1500ED4E6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "mvc-shooter/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.josefdolezal.mvc-shooter";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D2F3459C1F86AF1500ED4E6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "mvc-shooterTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.josefdolezal.mvc-shooterTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mvc-shooter.app/mvc-shooter";
+			};
+			name = Debug;
+		};
+		D2F3459D1F86AF1500ED4E6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "mvc-shooterTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.josefdolezal.mvc-shooterTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mvc-shooter.app/mvc-shooter";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D2F345701F86AF1500ED4E6A /* Build configuration list for PBXProject "mvc-shooter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2F345961F86AF1500ED4E6A /* Debug */,
+				D2F345971F86AF1500ED4E6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2F345981F86AF1500ED4E6A /* Build configuration list for PBXNativeTarget "mvc-shooter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2F345991F86AF1500ED4E6A /* Debug */,
+				D2F3459A1F86AF1500ED4E6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2F3459B1F86AF1500ED4E6A /* Build configuration list for PBXNativeTarget "mvc-shooterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2F3459C1F86AF1500ED4E6A /* Debug */,
+				D2F3459D1F86AF1500ED4E6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D2F3456D1F86AF1500ED4E6A /* Project object */;
+}
