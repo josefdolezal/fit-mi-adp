@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D2D2A2371F87EF2D002F2D62 /* BaseGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2A2361F87EF2D002F2D62 /* BaseGameViewController.swift */; };
 		D2F345791F86AF1500ED4E6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F345781F86AF1500ED4E6A /* AppDelegate.swift */; };
 		D2F3457B1F86AF1500ED4E6A /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D2F3457A1F86AF1500ED4E6A /* GameScene.sks */; };
 		D2F3457D1F86AF1500ED4E6A /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = D2F3457C1F86AF1500ED4E6A /* Actions.sks */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D2D2A2361F87EF2D002F2D62 /* BaseGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseGameViewController.swift; sourceTree = "<group>"; };
 		D2F345751F86AF1500ED4E6A /* mvc-shooter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mvc-shooter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F345781F86AF1500ED4E6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2F3457A1F86AF1500ED4E6A /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				D2F345851F86AF1500ED4E6A /* Assets.xcassets */,
 				D2F345871F86AF1500ED4E6A /* LaunchScreen.storyboard */,
 				D2F3458A1F86AF1500ED4E6A /* Info.plist */,
+				D2D2A2361F87EF2D002F2D62 /* BaseGameViewController.swift */,
 			);
 			path = "mvc-shooter";
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				D2F3457F1F86AF1500ED4E6A /* GameScene.swift in Sources */,
 				D2F345811F86AF1500ED4E6A /* GameViewController.swift in Sources */,
 				D2F345791F86AF1500ED4E6A /* AppDelegate.swift in Sources */,
+				D2D2A2371F87EF2D002F2D62 /* BaseGameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
