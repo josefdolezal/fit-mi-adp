@@ -6,8 +6,23 @@
 	objectVersion = 48;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		D2D2A2381F895700002F2D62 /* SwiftGen */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = D2D2A2391F895700002F2D62 /* Build configuration list for PBXAggregateTarget "SwiftGen" */;
+			buildPhases = (
+				D2D2A23D1F89573B002F2D62 /* Create Assets */,
+			);
+			dependencies = (
+			);
+			name = SwiftGen;
+			productName = SwiftGen;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		D2D2A2371F87EF2D002F2D62 /* BaseGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2A2361F87EF2D002F2D62 /* BaseGameViewController.swift */; };
+		D2D2A23F1F895769002F2D62 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2A23E1F895769002F2D62 /* Images.swift */; };
 		D2F345791F86AF1500ED4E6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F345781F86AF1500ED4E6A /* AppDelegate.swift */; };
 		D2F3457B1F86AF1500ED4E6A /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D2F3457A1F86AF1500ED4E6A /* GameScene.sks */; };
 		D2F3457D1F86AF1500ED4E6A /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = D2F3457C1F86AF1500ED4E6A /* Actions.sks */; };
@@ -30,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		D2D2A2361F87EF2D002F2D62 /* BaseGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseGameViewController.swift; sourceTree = "<group>"; };
+		D2D2A23E1F895769002F2D62 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		D2F345751F86AF1500ED4E6A /* mvc-shooter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mvc-shooter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F345781F86AF1500ED4E6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2F3457A1F86AF1500ED4E6A /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -62,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D2D2A23C1F895718002F2D62 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				D2D2A23E1F895769002F2D62 /* Images.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 		D2F3456C1F86AF1500ED4E6A = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +107,7 @@
 		D2F345771F86AF1500ED4E6A /* mvc-shooter */ = {
 			isa = PBXGroup;
 			children = (
+				D2D2A23C1F895718002F2D62 /* Generated */,
 				D2F345781F86AF1500ED4E6A /* AppDelegate.swift */,
 				D2F3457A1F86AF1500ED4E6A /* GameScene.sks */,
 				D2F3457C1F86AF1500ED4E6A /* Actions.sks */,
@@ -153,6 +178,10 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Josef Dolezal";
 				TargetAttributes = {
+					D2D2A2381F895700002F2D62 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
 					D2F345741F86AF1500ED4E6A = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
@@ -179,6 +208,7 @@
 			targets = (
 				D2F345741F86AF1500ED4E6A /* mvc-shooter */,
 				D2F3458E1F86AF1500ED4E6A /* mvc-shooterTests */,
+				D2D2A2381F895700002F2D62 /* SwiftGen */,
 			);
 		};
 /* End PBXProject section */
@@ -204,6 +234,24 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D2D2A23D1F89573B002F2D62 /* Create Assets */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/myfile",
+			);
+			name = "Create Assets";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "swiftgen xcassets ${SRCROOT}/mvc-shooter/Assets.xcassets --template swift4 --output mvc-shooter/Generated/Images.swift";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D2F345711F86AF1500ED4E6A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -211,6 +259,7 @@
 			files = (
 				D2F3457F1F86AF1500ED4E6A /* GameScene.swift in Sources */,
 				D2F345811F86AF1500ED4E6A /* GameViewController.swift in Sources */,
+				D2D2A23F1F895769002F2D62 /* Images.swift in Sources */,
 				D2F345791F86AF1500ED4E6A /* AppDelegate.swift in Sources */,
 				D2D2A2371F87EF2D002F2D62 /* BaseGameViewController.swift in Sources */,
 			);
@@ -246,6 +295,22 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D2D2A23A1F895700002F2D62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D2D2A23B1F895700002F2D62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		D2F345961F86AF1500ED4E6A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -418,6 +483,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D2D2A2391F895700002F2D62 /* Build configuration list for PBXAggregateTarget "SwiftGen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2D2A23A1F895700002F2D62 /* Debug */,
+				D2D2A23B1F895700002F2D62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D2F345701F86AF1500ED4E6A /* Build configuration list for PBXProject "mvc-shooter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
