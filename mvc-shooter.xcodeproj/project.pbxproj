@@ -23,6 +23,14 @@
 /* Begin PBXBuildFile section */
 		D20E332F1F896F250039A027 /* CGPoint+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E332E1F896F250039A027 /* CGPoint+Distance.swift */; };
 		D20E33331F8971A40039A027 /* CGPoint+DistanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E33321F8971A40039A027 /* CGPoint+DistanceTests.swift */; };
+		D2C1567D1FA73301009BFB28 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C1567C1FA73301009BFB28 /* GameObject.swift */; };
+		D2C1567F1FA7336A009BFB28 /* ScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C1567E1FA7336A009BFB28 /* ScreenModel.swift */; };
+		D2C156811FA73395009BFB28 /* Canon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C156801FA73395009BFB28 /* Canon.swift */; };
+		D2C156831FA733A2009BFB28 /* CanonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C156821FA733A2009BFB28 /* CanonModel.swift */; };
+		D2C156851FA733E5009BFB28 /* Pig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C156841FA733E5009BFB28 /* Pig.swift */; };
+		D2C156871FA73401009BFB28 /* PigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C156861FA73401009BFB28 /* PigModel.swift */; };
+		D2C156891FA73499009BFB28 /* Bird.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C156881FA73499009BFB28 /* Bird.swift */; };
+		D2C1568B1FA734B0009BFB28 /* BirdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C1568A1FA734B0009BFB28 /* BirdModel.swift */; };
 		D2D2A2371F87EF2D002F2D62 /* BaseGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2A2361F87EF2D002F2D62 /* BaseGameViewController.swift */; };
 		D2D2A23F1F895769002F2D62 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2A23E1F895769002F2D62 /* Images.swift */; };
 		D2F345791F86AF1500ED4E6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F345781F86AF1500ED4E6A /* AppDelegate.swift */; };
@@ -48,6 +56,14 @@
 /* Begin PBXFileReference section */
 		D20E332E1F896F250039A027 /* CGPoint+Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Distance.swift"; sourceTree = "<group>"; };
 		D20E33321F8971A40039A027 /* CGPoint+DistanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+DistanceTests.swift"; sourceTree = "<group>"; };
+		D2C1567C1FA73301009BFB28 /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
+		D2C1567E1FA7336A009BFB28 /* ScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModel.swift; sourceTree = "<group>"; };
+		D2C156801FA73395009BFB28 /* Canon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canon.swift; sourceTree = "<group>"; };
+		D2C156821FA733A2009BFB28 /* CanonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanonModel.swift; sourceTree = "<group>"; };
+		D2C156841FA733E5009BFB28 /* Pig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pig.swift; sourceTree = "<group>"; };
+		D2C156861FA73401009BFB28 /* PigModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PigModel.swift; sourceTree = "<group>"; };
+		D2C156881FA73499009BFB28 /* Bird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bird.swift; sourceTree = "<group>"; };
+		D2C1568A1FA734B0009BFB28 /* BirdModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdModel.swift; sourceTree = "<group>"; };
 		D2D2A2361F87EF2D002F2D62 /* BaseGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseGameViewController.swift; sourceTree = "<group>"; };
 		D2D2A23E1F895769002F2D62 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		D2F345751F86AF1500ED4E6A /* mvc-shooter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mvc-shooter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +106,29 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		D2C1567A1FA732D9009BFB28 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D2C1567B1FA732E2009BFB28 /* Game Objects */,
+				D2C1567E1FA7336A009BFB28 /* ScreenModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D2C1567B1FA732E2009BFB28 /* Game Objects */ = {
+			isa = PBXGroup;
+			children = (
+				D2C1567C1FA73301009BFB28 /* GameObject.swift */,
+				D2C156801FA73395009BFB28 /* Canon.swift */,
+				D2C156821FA733A2009BFB28 /* CanonModel.swift */,
+				D2C156841FA733E5009BFB28 /* Pig.swift */,
+				D2C156861FA73401009BFB28 /* PigModel.swift */,
+				D2C156881FA73499009BFB28 /* Bird.swift */,
+				D2C1568A1FA734B0009BFB28 /* BirdModel.swift */,
+			);
+			path = "Game Objects";
+			sourceTree = "<group>";
+		};
 		D2D2A23C1F895718002F2D62 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +158,7 @@
 		D2F345771F86AF1500ED4E6A /* mvc-shooter */ = {
 			isa = PBXGroup;
 			children = (
+				D2C1567A1FA732D9009BFB28 /* Model */,
 				D20E332B1F895D730039A027 /* Extensions */,
 				D2D2A23C1F895718002F2D62 /* Generated */,
 				D2F345781F86AF1500ED4E6A /* AppDelegate.swift */,
@@ -273,10 +313,18 @@
 			files = (
 				D20E332F1F896F250039A027 /* CGPoint+Distance.swift in Sources */,
 				D2F3457F1F86AF1500ED4E6A /* GameScene.swift in Sources */,
+				D2C156871FA73401009BFB28 /* PigModel.swift in Sources */,
+				D2C1567D1FA73301009BFB28 /* GameObject.swift in Sources */,
+				D2C1568B1FA734B0009BFB28 /* BirdModel.swift in Sources */,
+				D2C156851FA733E5009BFB28 /* Pig.swift in Sources */,
+				D2C156811FA73395009BFB28 /* Canon.swift in Sources */,
 				D2F345811F86AF1500ED4E6A /* GameViewController.swift in Sources */,
+				D2C156831FA733A2009BFB28 /* CanonModel.swift in Sources */,
 				D2D2A23F1F895769002F2D62 /* Images.swift in Sources */,
+				D2C1567F1FA7336A009BFB28 /* ScreenModel.swift in Sources */,
 				D2F345791F86AF1500ED4E6A /* AppDelegate.swift in Sources */,
 				D2D2A2371F87EF2D002F2D62 /* BaseGameViewController.swift in Sources */,
+				D2C156891FA73499009BFB28 /* Bird.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
