@@ -13,9 +13,11 @@ import GameplayKit
 class GameViewController: BaseGameViewController {
 
     private let model: ScreenModelType
+    private let scene: GameScene
 
     init(model: ScreenModelType) {
-        self.model = screenModel
+        self.model = model
+        self.scene = GameScene()
 
         super.init(nibName: nil, bundle: nil)
     }
@@ -27,8 +29,7 @@ class GameViewController: BaseGameViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let scene = GameScene()
-
+        model.add(observer: scene)
         scene.scaleMode = .aspectFill
 
         skView.presentScene(scene)

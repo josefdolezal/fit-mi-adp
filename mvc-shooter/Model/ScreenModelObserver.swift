@@ -1,5 +1,5 @@
 //
-//  ScreenModelType.swift
+//  ScreenModelObserver.swift
 //  mvc-shooter
 //
 //  Created by Josef Dolezal on 30/10/2017.
@@ -8,8 +8,6 @@
 
 import Foundation
 
-protocol ScreenModelType {
-    func add(observer: ScreenModelObserver)
-
-    func remove(observer: ScreenModelObserver)
+protocol ScreenModelObserver: class {
+    func modelChanged()
 }

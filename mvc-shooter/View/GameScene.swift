@@ -9,7 +9,7 @@
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, ScreenModelObserver {
     
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
@@ -61,12 +61,20 @@ class GameScene: SKScene {
             self.addChild(n)
         }
     }
+
+    // MARK: - Screen Model Observer
+
+    func modelChanged() {
+
+    }
+
+    // MARK: - UI Gestures
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let label = self.label {
             label.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
         }
-        
+
         for t in touches { self.touchDown(atPoint: t.location(in: self)) }
     }
     
