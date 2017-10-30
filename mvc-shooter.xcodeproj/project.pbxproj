@@ -129,6 +129,35 @@
 			path = "Game Objects";
 			sourceTree = "<group>";
 		};
+		D2C1568C1FA73825009BFB28 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D2D2A2361F87EF2D002F2D62 /* BaseGameViewController.swift */,
+				D2F345801F86AF1500ED4E6A /* GameViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D2C1568D1FA73868009BFB28 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D2F345871F86AF1500ED4E6A /* LaunchScreen.storyboard */,
+				D2F3458A1F86AF1500ED4E6A /* Info.plist */,
+				D2F345851F86AF1500ED4E6A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D2C1568E1FA73885009BFB28 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D2F3457E1F86AF1500ED4E6A /* GameScene.swift */,
+				D2F3457A1F86AF1500ED4E6A /* GameScene.sks */,
+				D2F3457C1F86AF1500ED4E6A /* Actions.sks */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D2D2A23C1F895718002F2D62 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,18 +187,13 @@
 		D2F345771F86AF1500ED4E6A /* mvc-shooter */ = {
 			isa = PBXGroup;
 			children = (
-				D2C1567A1FA732D9009BFB28 /* Model */,
+				D2C1568D1FA73868009BFB28 /* Resources */,
 				D20E332B1F895D730039A027 /* Extensions */,
 				D2D2A23C1F895718002F2D62 /* Generated */,
+				D2C1567A1FA732D9009BFB28 /* Model */,
+				D2C1568E1FA73885009BFB28 /* View */,
+				D2C1568C1FA73825009BFB28 /* Controllers */,
 				D2F345781F86AF1500ED4E6A /* AppDelegate.swift */,
-				D2F3457A1F86AF1500ED4E6A /* GameScene.sks */,
-				D2F3457C1F86AF1500ED4E6A /* Actions.sks */,
-				D2F3457E1F86AF1500ED4E6A /* GameScene.swift */,
-				D2F345801F86AF1500ED4E6A /* GameViewController.swift */,
-				D2F345851F86AF1500ED4E6A /* Assets.xcassets */,
-				D2F345871F86AF1500ED4E6A /* LaunchScreen.storyboard */,
-				D2F3458A1F86AF1500ED4E6A /* Info.plist */,
-				D2D2A2361F87EF2D002F2D62 /* BaseGameViewController.swift */,
 			);
 			path = "mvc-shooter";
 			sourceTree = "<group>";
@@ -488,7 +512,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69T295ARCG;
-				INFOPLIST_FILE = "mvc-shooter/Info.plist";
+				INFOPLIST_FILE = "mvc-shooter/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.josefdolezal.mvc-shooter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -503,7 +527,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69T295ARCG;
-				INFOPLIST_FILE = "mvc-shooter/Info.plist";
+				INFOPLIST_FILE = "mvc-shooter/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.josefdolezal.mvc-shooter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
