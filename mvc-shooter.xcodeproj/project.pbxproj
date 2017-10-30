@@ -23,6 +23,7 @@
 /* Begin PBXBuildFile section */
 		D20E332F1F896F250039A027 /* CGPoint+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E332E1F896F250039A027 /* CGPoint+Distance.swift */; };
 		D20E33331F8971A40039A027 /* CGPoint+DistanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E33321F8971A40039A027 /* CGPoint+DistanceTests.swift */; };
+		D26029BB1FA76E0C00CF49E7 /* ScreenModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26029BA1FA76E0C00CF49E7 /* ScreenModelType.swift */; };
 		D2C1567D1FA73301009BFB28 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C1567C1FA73301009BFB28 /* GameObject.swift */; };
 		D2C1567F1FA7336A009BFB28 /* ScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C1567E1FA7336A009BFB28 /* ScreenModel.swift */; };
 		D2C156811FA73395009BFB28 /* Canon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C156801FA73395009BFB28 /* Canon.swift */; };
@@ -56,6 +57,7 @@
 /* Begin PBXFileReference section */
 		D20E332E1F896F250039A027 /* CGPoint+Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Distance.swift"; sourceTree = "<group>"; };
 		D20E33321F8971A40039A027 /* CGPoint+DistanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+DistanceTests.swift"; sourceTree = "<group>"; };
+		D26029BA1FA76E0C00CF49E7 /* ScreenModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModelType.swift; sourceTree = "<group>"; };
 		D2C1567C1FA73301009BFB28 /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
 		D2C1567E1FA7336A009BFB28 /* ScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModel.swift; sourceTree = "<group>"; };
 		D2C156801FA73395009BFB28 /* Canon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canon.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			children = (
 				D2C1567B1FA732E2009BFB28 /* Game Objects */,
 				D2C1567E1FA7336A009BFB28 /* ScreenModel.swift */,
+				D26029BA1FA76E0C00CF49E7 /* ScreenModelType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D20E332F1F896F250039A027 /* CGPoint+Distance.swift in Sources */,
+				D26029BB1FA76E0C00CF49E7 /* ScreenModelType.swift in Sources */,
 				D2F3457F1F86AF1500ED4E6A /* GameScene.swift in Sources */,
 				D2C156871FA73401009BFB28 /* PigModel.swift in Sources */,
 				D2C1567D1FA73301009BFB28 /* GameObject.swift in Sources */,

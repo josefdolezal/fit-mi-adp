@@ -8,13 +8,13 @@
 
 import CoreGraphics
 
-class ScreenModel {
-    private let cannon: Cannon
-    private var birds: [Bird]
-    private var pigs: [Pig]
+class ScreenModel: ScreenModelType {
+    private let cannon: CannonModel
+    private var birds: [BirdModel]
+    private var pigs: [PigModel]
 
     init() {
-        self.cannon = Cannon(location: CGPoint(x: 0, y: 0))
+        self.cannon = CannonModel(cannon: Cannon(location: .init(x: 0, y: 0 )))
         self.birds = []
         self.pigs = []
     }
