@@ -7,11 +7,40 @@
 //
 
 import Foundation
+import CoreGraphics
 
 class CannonModel {
-    let cannon: Cannon
+    private let cannon: Cannon
 
     init(cannon: Cannon) {
         self.cannon = cannon
+    }
+
+    // MARK: Location API
+
+    func locationX() -> CGFloat {
+        return cannon.location.x
+    }
+
+    func locationY() -> CGFloat {
+        return cannon.location.y
+    }
+
+    // MARK: Moving API
+
+    func moveCannonLeft() {
+        cannon.location.x -= 5
+    }
+
+    func moveCannonRight() {
+        cannon.location.x += 5
+    }
+
+    func moveCannonUp() {
+        cannon.location.y -= 5
+    }
+
+    func moveCannonDown() {
+        cannon.location.y += 5
     }
 }
