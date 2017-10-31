@@ -45,6 +45,12 @@ struct ColorAsset {
 enum Asset {
   static let bird = ImageAsset(name: "bird")
   static let cannon = ImageAsset(name: "cannon")
+  enum Controls {
+    static let arrowBottom = ImageAsset(name: "arrowBottom")
+    static let arrowLeft = ImageAsset(name: "arrowLeft")
+    static let arrowRight = ImageAsset(name: "arrowRight")
+    static let arrowTop = ImageAsset(name: "arrowTop")
+  }
   static let piggyDamaged = ImageAsset(name: "piggy-damaged")
   static let piggyHappy = ImageAsset(name: "piggy-happy")
   static let piggyKo = ImageAsset(name: "piggy-ko")
@@ -56,6 +62,10 @@ enum Asset {
   static let allImages: [ImageAsset] = [
     bird,
     cannon,
+    Controls.arrowBottom,
+    Controls.arrowLeft,
+    Controls.arrowRight,
+    Controls.arrowTop,
     piggyDamaged,
     piggyHappy,
     piggyKo,
