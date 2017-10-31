@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		D20A7A241FA9226100DD88F0 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20A7A231FA9226100DD88F0 /* ControlsView.swift */; };
 		D20E332F1F896F250039A027 /* CGPoint+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E332E1F896F250039A027 /* CGPoint+Distance.swift */; };
 		D20E33331F8971A40039A027 /* CGPoint+DistanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E33321F8971A40039A027 /* CGPoint+DistanceTests.swift */; };
 		D26029BB1FA76E0C00CF49E7 /* ScreenModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26029BA1FA76E0C00CF49E7 /* ScreenModelType.swift */; };
@@ -57,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D20A7A231FA9226100DD88F0 /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
 		D20E332E1F896F250039A027 /* CGPoint+Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Distance.swift"; sourceTree = "<group>"; };
 		D20E33321F8971A40039A027 /* CGPoint+DistanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+DistanceTests.swift"; sourceTree = "<group>"; };
 		D26029BA1FA76E0C00CF49E7 /* ScreenModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModelType.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				D2F3457E1F86AF1500ED4E6A /* GameScene.swift */,
 				D2F3457A1F86AF1500ED4E6A /* GameScene.sks */,
 				D2F3457C1F86AF1500ED4E6A /* Actions.sks */,
+				D20A7A231FA9226100DD88F0 /* ControlsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D20A7A241FA9226100DD88F0 /* ControlsView.swift in Sources */,
 				D20E332F1F896F250039A027 /* CGPoint+Distance.swift in Sources */,
 				D26029BB1FA76E0C00CF49E7 /* ScreenModelType.swift in Sources */,
 				D2F3457F1F86AF1500ED4E6A /* GameScene.swift in Sources */,
