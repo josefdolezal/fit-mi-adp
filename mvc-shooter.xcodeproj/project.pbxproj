@@ -346,7 +346,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "swiftgen xcassets ${SRCROOT}/mvc-shooter/Assets.xcassets --template swift4 --output mvc-shooter/Generated/Images.swift";
+			shellScript = "swiftgen xcassets ${SRCROOT}/mvc-shooter/Resources/Assets.xcassets --template swift4 --output mvc-shooter/Generated/Images.swift";
 		};
 /* End PBXShellScriptBuildPhase section */
 
