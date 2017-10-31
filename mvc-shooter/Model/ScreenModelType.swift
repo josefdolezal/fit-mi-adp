@@ -8,7 +8,21 @@
 
 import Foundation
 
-protocol ScreenModelType {
+protocol ScreenModelType: class {
+    var cannon: CannonModel { get }
+
+    // MARK: - Cannon API
+
+    func moveCannonLeft()
+
+    func moveCannonRight()
+
+    func moveCannonUp()
+    
+    func moveCannonDown()
+
+    // MARK: - Observable API
+
     func add(observer: ScreenModelObserver)
 
     func remove(observer: ScreenModelObserver)

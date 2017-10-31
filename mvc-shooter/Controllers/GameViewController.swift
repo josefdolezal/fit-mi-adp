@@ -10,14 +10,16 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
-class GameViewController: BaseGameViewController {
+class GameViewController: UIViewController {
 
     private let model: ScreenModelType
-    private let scene: GameScene
+    private let canvasView: CanvasView
+    private let controlsView: ControlsView
 
     init(model: ScreenModelType) {
         self.model = model
-        self.scene = GameScene()
+        self.canvasView = CanvasView(model: model)
+        self.controlsView = ControlsView()
 
         super.init(nibName: nil, bundle: nil)
     }
@@ -29,12 +31,40 @@ class GameViewController: BaseGameViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        model.add(observer: scene)
-        scene.scaleMode = .aspectFill
+        view.addSubview(canvasView)
+        view.addSubview(controlsView)
 
-        skView.presentScene(scene)
-        skView.ignoresSiblingOrder = true
-        skView.showsFPS = true
-        skView.showsNodeCount = true
+        canvasView.frame = view.frame
+
+        controlsView.translatesAutoresizingMaskIntoConstraints = false
+        controlsView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -15).isActive = true
+        controlsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15).isActive = true
+
+        controlsView.leftButton.addTarget(self, action: #selector(leftButtonTapped), for: .touchUpInside)
+        controlsView.rightButton.addTarget(self, action: #selector(rightButtonTapped), for: .touchUpInside)
+        controlsView.upButton.addTarget(self, action: #selector(upButtonTapped), for: .touchUpInside)
+        controlsView.downButton.addTarget(self, action: #selector(downButtonTapped), for: .touchUpInside)
+    }
+
+    // MARK: UI Callbacks
+
+    @objc
+    func leftButtonTapped() {
+        model.moveCannonLeft()
+    }
+
+    @objc
+    func rightButtonTapped() {
+        model.moveCannonRight()
+    }
+
+    @objc
+    func upButtonTapped() {
+        model.moveCannonUp()
+    }
+
+    @objc
+    func downButtonTapped() {
+        model.moveCannonDown()
     }
 }

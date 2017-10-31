@@ -9,7 +9,8 @@
 import CoreGraphics
 
 class ScreenModel: ScreenModelType {
-    private let cannon: CannonModel
+    let cannon: CannonModel
+    
     private var birds: [BirdModel]
     private var pigs: [PigModel]
     private var observers: [ScreenModelObserver]
@@ -21,6 +22,32 @@ class ScreenModel: ScreenModelType {
         self.observers = []
     }
 
+    // MARK: - Cannon API
+
+    func moveCannonLeft() {
+        cannon.moveCannonLeft()
+
+        notifyObservers()
+    }
+
+    func moveCannonRight() {
+        cannon.moveCannonRight()
+
+        notifyObservers()
+    }
+
+    func moveCannonUp() {
+        cannon.moveCannonUp()
+
+        notifyObservers()
+    }
+
+    func moveCannonDown() {
+        cannon.moveCannonDown()
+
+        notifyObservers()
+    }
+
     // MARK: - Observable API
 
     func add(observer: ScreenModelObserver) {
@@ -29,5 +56,9 @@ class ScreenModel: ScreenModelType {
 
     func remove(observer: ScreenModelObserver) {
         self.observers = observers.filter { $0 !== observer }
+    }
+
+    private func notifyObservers() {
+        observers.forEach { $0.modelChanged() }
     }
 }
