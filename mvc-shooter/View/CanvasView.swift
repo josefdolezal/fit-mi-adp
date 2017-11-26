@@ -32,7 +32,7 @@ class CanvasView: UIView, ScreenModelObserver {
     // MARK: Drawing
 
     override func draw(_ rect: CGRect) {
-        drawer.drawCannon(cannon: model.cannon)
+        model.accept(visitor: drawer)
     }
 
     // MARK: Screen Model Observer

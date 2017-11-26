@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol ScreenModelType: class {
+protocol ScreenModelType: class, GameObjectModelVisitable {
     var cannon: CannonModel { get }
 
     // MARK: - Cannon API

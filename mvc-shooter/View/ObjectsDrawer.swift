@@ -8,13 +8,23 @@
 
 import UIKit
 
-class ObjectsDrawer {
+class ObjectsDrawer: GameObjectVisitor {
 
     private let cannonImage = Asset.cannon.image
 
-    public func drawCannon(cannon: CannonModel) {
-        let cannonRect = CGRect(origin: .init(x: cannon.locationX(), y: cannon.locationY()), size: cannonImage.size)
+    // MARK: GameObjectModelVisitable
+
+    func visit(object: CannonModel) {
+        let cannonRect = CGRect(origin: .init(x: object.locationX(), y: object.locationY()), size: cannonImage.size)
 
         cannonImage.draw(in: cannonRect)
+    }
+
+    func visit(object: BirdModel) {
+
+    }
+
+    func visit(object: PigModel) {
+
     }
 }

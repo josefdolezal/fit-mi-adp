@@ -8,10 +8,16 @@
 
 import Foundation
 
-class PigModel {
+class PigModel: GameObjectModelVisitable {
     private let pig: Pig
 
     init(pig: Pig) {
         self.pig = pig
+    }
+
+    // MARK: GameObjectModelVisitable
+
+    func accept(visitor: GameObjectVisitor) {
+        visitor.visit(object: self)
     }
 }

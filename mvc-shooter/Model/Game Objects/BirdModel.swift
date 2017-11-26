@@ -8,11 +8,17 @@
 
 import Foundation
 
-class BirdModel {
+class BirdModel: GameObjectModelVisitable {
 
     private let bird: Bird
 
     init(bird: Bird) {
         self.bird = bird
+    }
+
+    // MARK: GameObjectModelVisitable
+
+    func accept(visitor: GameObjectVisitor) {
+        visitor.visit(object: self)
     }
 }

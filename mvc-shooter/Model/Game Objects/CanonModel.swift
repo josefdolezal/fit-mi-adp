@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CannonModel {
+class CannonModel: GameObjectModelVisitable {
     private let cannon: Cannon
 
     init(cannon: Cannon) {
@@ -41,5 +41,11 @@ class CannonModel {
 
     func moveCannonDown() {
         cannon.location.y += 5
+    }
+
+    // MARK: GameObjectVisitable
+
+    func accept(visitor: GameObjectVisitor) {
+        visitor.visit(object: self)
     }
 }
