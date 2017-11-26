@@ -13,8 +13,7 @@ class ObjectsDrawer {
     private let cannonImage = Asset.cannon.image
 
     public func drawCannon(cannon: CannonModel) {
-        let cannonRect = CGRect(x: cannon.locationX(), y: cannon.locationY(),
-                                width: cannonImage.size.width, height: cannonImage.size.height)
+        let cannonRect = CGRect(origin: .init(x: cannon.locationX(), y: cannon.locationY()), size: cannonImage.size)
 
         cannonImage.draw(in: cannonRect)
     }

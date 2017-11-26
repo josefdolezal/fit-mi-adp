@@ -6,13 +6,11 @@
 //  Copyright © 2017 Josef Dolezal. All rights reserved.
 //
 
-import CoreGraphics
-
 class GameObject {
 
-    var location: CGPoint
+    var location: Location
 
-    init(location: CGPoint) {
+    init(location: Location) {
         self.location = location
     }
 }

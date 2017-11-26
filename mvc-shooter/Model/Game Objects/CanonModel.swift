@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import CoreGraphics
 
 class CannonModel {
     private let cannon: Cannon
@@ -18,11 +17,11 @@ class CannonModel {
 
     // MARK: Location API
 
-    func locationX() -> CGFloat {
+    func locationX() -> Int {
         return cannon.location.x
     }
 
-    func locationY() -> CGFloat {
+    func locationY() -> Int {
         return cannon.location.y
     }
 
