@@ -12,28 +12,36 @@ class BattleScene: SKScene, ScreenModelObserver {
 
     private let model: ScreenModelType
 
+    private let cannonNode: CannonNode
+    private var pigNodes = [PigNode]()
+    private var birdNodes = [BirdNode]()
+
     // MARK: - Initializers
 
     init(model: ScreenModelType) {
         self.model = model
+        self.cannonNode = CannonNode(model: model.cannon)
 
         super.init(size: .zero)
 
-        model.add(observer: self)
+        setup()
     }
 
     required init?(coder aDecoder: NSCoder) {
-        guard let model = aDecoder.value(forKey: "model") as? ScreenModelType else {
-            return nil
-        }
-
-        self.model = model
-        super.init(coder: aDecoder)
+        fatalError("init(coder:) is not implemented, use init(model:) instead")
     }
 
     // MARK: - ScreenModelObserver
 
     func modelChanged() {
+        cannonNode.redraw()
+    }
 
+    // MARK: - Private API
+
+    private func setup() {
+        addChild(cannonNode)
+
+        model.add(observer: self)
     }
 }

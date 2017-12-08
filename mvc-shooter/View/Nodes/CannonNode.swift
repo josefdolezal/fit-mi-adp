@@ -12,20 +12,28 @@ class CannonNode: SKSpriteNode {
 
     private static let nodeName = "cannon"
 
+    let model: CannonModel
+
     // MARK: - Initializers
 
-    init(position: CGPoint) {
+    init(model: CannonModel) {
         let texture = SKTexture(imageNamed: CannonNode.nodeName)
+
+        self.model = model
 
         super.init(texture: texture, color: .clear, size: texture.size())
     }
 
     required init?(coder aDecoder: NSCoder) {
-        let texture = SKTexture(imageNamed: CannonNode.nodeName)
+        fatalError("init(coder:) is not implemented, use init(model:) instead")
+    }
 
-        super.init(coder: aDecoder)
+    // MARK: - Public API
 
-        self.texture = texture
+    func redraw() {
+        let newLocation = CGPoint(x: model.locationX(), y: model.locationY())
+
+        run(SKAction.move(to: newLocation, duration: 0.1))
     }
 
     // MARK: - Private API

@@ -40,6 +40,7 @@
 		D2C156871FA73401009BFB28 /* PigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C156861FA73401009BFB28 /* PigModel.swift */; };
 		D2C156891FA73499009BFB28 /* Bird.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C156881FA73499009BFB28 /* Bird.swift */; };
 		D2C1568B1FA734B0009BFB28 /* BirdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C1568A1FA734B0009BFB28 /* BirdModel.swift */; };
+		D2C682CF1FDAFCB0002487CF /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C682CE1FDAFCB0002487CF /* Point.swift */; };
 		D2D2A2371F87EF2D002F2D62 /* BaseGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2A2361F87EF2D002F2D62 /* BaseGameViewController.swift */; };
 		D2D2A23F1F895769002F2D62 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2A23E1F895769002F2D62 /* Images.swift */; };
 		D2F345791F86AF1500ED4E6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F345781F86AF1500ED4E6A /* AppDelegate.swift */; };
@@ -79,6 +80,7 @@
 		D2C156861FA73401009BFB28 /* PigModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PigModel.swift; sourceTree = "<group>"; };
 		D2C156881FA73499009BFB28 /* Bird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bird.swift; sourceTree = "<group>"; };
 		D2C1568A1FA734B0009BFB28 /* BirdModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdModel.swift; sourceTree = "<group>"; };
+		D2C682CE1FDAFCB0002487CF /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 		D2D2A2361F87EF2D002F2D62 /* BaseGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseGameViewController.swift; sourceTree = "<group>"; };
 		D2D2A23E1F895769002F2D62 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		D2F345751F86AF1500ED4E6A /* mvc-shooter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mvc-shooter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +154,7 @@
 				D2C1567E1FA7336A009BFB28 /* ScreenModel.swift */,
 				D26029BA1FA76E0C00CF49E7 /* ScreenModelType.swift */,
 				D26029BD1FA7C6D100CF49E7 /* ScreenModelObserver.swift */,
+				D2C682CE1FDAFCB0002487CF /* Point.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 				D2C1567F1FA7336A009BFB28 /* ScreenModel.swift in Sources */,
 				D2F345791F86AF1500ED4E6A /* AppDelegate.swift in Sources */,
 				D26029BE1FA7C6D100CF49E7 /* ScreenModelObserver.swift in Sources */,
+				D2C682CF1FDAFCB0002487CF /* Point.swift in Sources */,
 				D2D2A2371F87EF2D002F2D62 /* BaseGameViewController.swift in Sources */,
 				D2C156891FA73499009BFB28 /* Bird.swift in Sources */,
 				D2B2DABE1FDA98800023C5BF /* NodeCategory.swift in Sources */,

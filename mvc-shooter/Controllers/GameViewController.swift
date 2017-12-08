@@ -53,6 +53,8 @@ class GameViewController: BaseGameViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.layoutIfNeeded()
+
         battleSceen.size = skView.bounds.size
         bindControls()
     }
