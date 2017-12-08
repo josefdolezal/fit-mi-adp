@@ -11,8 +11,8 @@ import CoreGraphics
 class ScreenModel: ScreenModelType {
     let cannon: CannonModel
     
-    private var birds: [BirdModel]
-    private var pigs: [PigModel]
+    private(set) var birds: [BirdModel]
+    private(set) var pigs: [PigModel]
     private var observers: [ScreenModelObserver]
 
     init() {
@@ -44,6 +44,18 @@ class ScreenModel: ScreenModelType {
 
     func moveCannonDown() {
         cannon.moveCannonDown()
+
+        notifyObservers()
+    }
+
+    // MARK: - Piggies API
+
+    func spawnPig() {
+        let randomX = Random.next(upperBound: 400)
+        let randomY = Random.next(upperBound: 200)
+        let pigModel = PigModel(pig: Pig(x: randomX, y: randomY))
+
+        pigs.append(pigModel)
 
         notifyObservers()
     }

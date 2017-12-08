@@ -10,6 +10,11 @@ import SpriteKit
 
 class BattleScene: SKScene, ScreenModelObserver {
 
+    enum Constants {
+        static let maximumEnemies = 8
+        static let enemySpawnInterval: TimeInterval = 3
+    }
+
     private let model: ScreenModelType
 
     private let cannonNode: CannonNode
@@ -34,6 +39,10 @@ class BattleScene: SKScene, ScreenModelObserver {
     // MARK: - ScreenModelObserver
 
     func modelChanged() {
+        createMissingPigNodes()
+
+        pigNodes.forEach { $0.redraw() }
+
         cannonNode.redraw()
     }
 
@@ -43,5 +52,28 @@ class BattleScene: SKScene, ScreenModelObserver {
         addChild(cannonNode)
 
         model.add(observer: self)
+
+        // Spawn automatically new enemies
+        let spawnAction = SKAction.repeatForever(SKAction.sequence([
+            SKAction.wait(forDuration: Constants.enemySpawnInterval),
+            SKAction.run(spawnPig)
+        ]))
+
+        run(spawnAction)
+    }
+
+    private func spawnPig() {
+        model.spawnPig()
+    }
+
+    // MARK: - Drawing mapping
+
+    private func createMissingPigNodes() {
+        let mappedModels = pigNodes.map { $0.model }
+        let unMappedModels = model.pigs.filter { !mappedModels.contains($0) }
+        let newNodes = unMappedModels.map(PigNode.init(model:))
+
+        newNodes.forEach(addChild(_:))
+        pigNodes.append(contentsOf: newNodes)
     }
 }

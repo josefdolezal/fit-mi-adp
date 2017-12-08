@@ -14,23 +14,29 @@ class PigNode: SKSpriteNode {
         static let piggyHappy = "piggy-happy"
     }
 
+    let model: PigModel
+
     // MARK: - Initializers
 
-    init(position: CGPoint) {
+    init(model: PigModel) {
+        self.model = model
         let texture = SKTexture(imageNamed: NodeNames.piggyHappy)
 
         super.init(texture: texture, color: .clear, size: texture.size())
+
+        self.position = .init(x: model.locationX(), y: model.locationY())
 
         setupNodePhysics(texture: texture)
     }
 
     required init?(coder aDecoder: NSCoder) {
-        let texture = SKTexture(imageNamed: NodeNames.piggyHappy)
+        fatalError("init(coder:) not implemented, use init(coder:)")
+    }
 
-        super.init(coder: aDecoder)
+    // MARK: - Public API
 
-        self.texture = texture
-        setupNodePhysics(texture: texture)
+    func redraw() {
+        run(SKAction.move(to: .init(x: model.locationX(), y: model.locationY()), duration: 0.1))
     }
 
     // MARK: - Private API

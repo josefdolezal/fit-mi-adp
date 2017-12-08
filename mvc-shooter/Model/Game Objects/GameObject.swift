@@ -13,4 +13,8 @@ class GameObject {
     init(location: Point) {
         self.location = location
     }
+
+    convenience init(x: Int, y: Int) {
+        self.init(location: .init(x: x, y: y))
+    }
 }

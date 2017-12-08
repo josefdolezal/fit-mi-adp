@@ -9,6 +9,15 @@
 import CoreGraphics
 
 extension CGPoint {
+
+    // MARK: - Initializers
+
+    init(point: Point) {
+        self.init(x: point.x, y: point.y)
+    }
+
+    // MARK: - Distance functions
+
     func delta(to other: CGPoint) -> CGVector {
         func coordinateDelta(first: CGFloat, second: CGFloat) -> CGFloat {
             let delta = abs(second) - abs(first)

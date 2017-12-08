@@ -10,6 +10,8 @@ import Foundation
 
 protocol ScreenModelType: class {
     var cannon: CannonModel { get }
+    var pigs: [PigModel] { get }
+    var birds: [BirdModel] { get }
 
     // MARK: - Cannon API
 
@@ -20,6 +22,10 @@ protocol ScreenModelType: class {
     func moveCannonUp()
     
     func moveCannonDown()
+
+    // MARK: - Piggies API
+
+    func spawnPig()
 
     // MARK: - Observable API
 

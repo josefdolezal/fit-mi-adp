@@ -8,10 +8,27 @@
 
 import Foundation
 
-class PigModel {
+class PigModel: Equatable {
+
     private let pig: Pig
 
     init(pig: Pig) {
         self.pig = pig
+    }
+
+    // MARK: - Location API
+
+    func locationX() -> Int {
+        return pig.location.x
+    }
+
+    func locationY() -> Int {
+        return pig.location.y
+    }
+
+    // MARK: - Equatable
+
+    public static func ==(lhs: PigModel, rhs: PigModel) -> Bool {
+        return lhs === rhs
     }
 }
