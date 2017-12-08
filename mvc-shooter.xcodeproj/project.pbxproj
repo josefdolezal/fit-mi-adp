@@ -29,6 +29,10 @@
 		D26029BB1FA76E0C00CF49E7 /* ScreenModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26029BA1FA76E0C00CF49E7 /* ScreenModelType.swift */; };
 		D26029BE1FA7C6D100CF49E7 /* ScreenModelObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26029BD1FA7C6D100CF49E7 /* ScreenModelObserver.swift */; };
 		D26029C11FA7C7D900CF49E7 /* ScreenModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26029C01FA7C7D900CF49E7 /* ScreenModelTests.swift */; };
+		D2B2DAB61FDA95000023C5BF /* CannonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B2DAB51FDA95000023C5BF /* CannonNode.swift */; };
+		D2B2DAB81FDA95130023C5BF /* BirdNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B2DAB71FDA95130023C5BF /* BirdNode.swift */; };
+		D2B2DABA1FDA951E0023C5BF /* PigNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B2DAB91FDA951E0023C5BF /* PigNode.swift */; };
+		D2B2DABE1FDA98800023C5BF /* NodeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B2DABD1FDA98800023C5BF /* NodeCategory.swift */; };
 		D2C1567D1FA73301009BFB28 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C1567C1FA73301009BFB28 /* GameObject.swift */; };
 		D2C1567F1FA7336A009BFB28 /* ScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C1567E1FA7336A009BFB28 /* ScreenModel.swift */; };
 		D2C156811FA73395009BFB28 /* Canon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C156801FA73395009BFB28 /* Canon.swift */; };
@@ -65,6 +69,10 @@
 		D26029BA1FA76E0C00CF49E7 /* ScreenModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModelType.swift; sourceTree = "<group>"; };
 		D26029BD1FA7C6D100CF49E7 /* ScreenModelObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModelObserver.swift; sourceTree = "<group>"; };
 		D26029C01FA7C7D900CF49E7 /* ScreenModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModelTests.swift; sourceTree = "<group>"; };
+		D2B2DAB51FDA95000023C5BF /* CannonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CannonNode.swift; sourceTree = "<group>"; };
+		D2B2DAB71FDA95130023C5BF /* BirdNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdNode.swift; sourceTree = "<group>"; };
+		D2B2DAB91FDA951E0023C5BF /* PigNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PigNode.swift; sourceTree = "<group>"; };
+		D2B2DABD1FDA98800023C5BF /* NodeCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeCategory.swift; sourceTree = "<group>"; };
 		D2C1567C1FA73301009BFB28 /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
 		D2C1567E1FA7336A009BFB28 /* ScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModel.swift; sourceTree = "<group>"; };
 		D2C156801FA73395009BFB28 /* Canon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canon.swift; sourceTree = "<group>"; };
@@ -120,6 +128,17 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		D2B2DAB41FDA94BB0023C5BF /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				D2B2DAB51FDA95000023C5BF /* CannonNode.swift */,
+				D2B2DAB71FDA95130023C5BF /* BirdNode.swift */,
+				D2B2DAB91FDA951E0023C5BF /* PigNode.swift */,
+				D2B2DABD1FDA98800023C5BF /* NodeCategory.swift */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
 		D2C1567A1FA732D9009BFB28 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +186,7 @@
 		D2C1568E1FA73885009BFB28 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D2B2DAB41FDA94BB0023C5BF /* Nodes */,
 				D20A7A1F1FA90FCD00DD88F0 /* CanvasView.swift */,
 				D20A7A211FA910FC00DD88F0 /* ObjectsDrawer.swift */,
 				D20A7A231FA9226100DD88F0 /* ControlsView.swift */,
@@ -351,8 +371,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D20A7A241FA9226100DD88F0 /* ControlsView.swift in Sources */,
+				D2B2DABA1FDA951E0023C5BF /* PigNode.swift in Sources */,
 				D20E332F1F896F250039A027 /* CGPoint+Distance.swift in Sources */,
+				D2B2DAB61FDA95000023C5BF /* CannonNode.swift in Sources */,
 				D26029BB1FA76E0C00CF49E7 /* ScreenModelType.swift in Sources */,
+				D2B2DAB81FDA95130023C5BF /* BirdNode.swift in Sources */,
 				D2C156871FA73401009BFB28 /* PigModel.swift in Sources */,
 				D2C1567D1FA73301009BFB28 /* GameObject.swift in Sources */,
 				D2C1568B1FA734B0009BFB28 /* BirdModel.swift in Sources */,
@@ -368,6 +391,7 @@
 				D2D2A2371F87EF2D002F2D62 /* BaseGameViewController.swift in Sources */,
 				D2C156891FA73499009BFB28 /* Bird.swift in Sources */,
 				D20A7A201FA90FCD00DD88F0 /* CanvasView.swift in Sources */,
+				D2B2DABE1FDA98800023C5BF /* NodeCategory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
