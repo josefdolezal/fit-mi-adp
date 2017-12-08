@@ -10,16 +10,18 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
-class GameViewController: UIViewController {
+class GameViewController: BaseGameViewController {
 
     private let model: ScreenModelType
-    private let canvasView: CanvasView
     private let controlsView: ControlsView
+    private let battleSceen: BattleScene
+
+    // MARK: - Initializers
 
     init(model: ScreenModelType) {
         self.model = model
-        self.canvasView = CanvasView(model: model)
         self.controlsView = ControlsView()
+        self.battleSceen = BattleScene(model: model)
 
         super.init(nibName: nil, bundle: nil)
     }
@@ -28,25 +30,34 @@ class GameViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: - Controller lifecycle
+
+    override func loadView() {
+        super.loadView()
+
+        // MARK: ControlsView
+
+        view.addSubview(controlsView)
+        controlsView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            controlsView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -15),
+            controlsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15)
+        ])
+
+        // MARK: SpriteKit Scene
+
+        skView.contentMode = .scaleAspectFill
+        skView.presentScene(battleSceen)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.addSubview(canvasView)
-        view.addSubview(controlsView)
-
-        canvasView.frame = view.frame
-
-        controlsView.translatesAutoresizingMaskIntoConstraints = false
-        controlsView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -15).isActive = true
-        controlsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15).isActive = true
-
-        controlsView.leftButton.addTarget(self, action: #selector(leftButtonTapped), for: .touchUpInside)
-        controlsView.rightButton.addTarget(self, action: #selector(rightButtonTapped), for: .touchUpInside)
-        controlsView.upButton.addTarget(self, action: #selector(upButtonTapped), for: .touchUpInside)
-        controlsView.downButton.addTarget(self, action: #selector(downButtonTapped), for: .touchUpInside)
+        battleSceen.size = skView.bounds.size
+        bindControls()
     }
 
-    // MARK: UI Callbacks
+    // MARK: - UI Callbacks
 
     @objc
     func leftButtonTapped() {
@@ -66,5 +77,14 @@ class GameViewController: UIViewController {
     @objc
     func downButtonTapped() {
         model.moveCannonDown()
+    }
+
+    // MARK: - Private API
+
+    private func bindControls() {
+        controlsView.leftButton.addTarget(self, action: #selector(leftButtonTapped), for: .touchUpInside)
+        controlsView.rightButton.addTarget(self, action: #selector(rightButtonTapped), for: .touchUpInside)
+        controlsView.upButton.addTarget(self, action: #selector(upButtonTapped), for: .touchUpInside)
+        controlsView.downButton.addTarget(self, action: #selector(downButtonTapped), for: .touchUpInside)
     }
 }

@@ -33,7 +33,7 @@ class ControlsView: UIView {
             addSubview(button)
         }
 
-        [
+        let constraints = [
             leftButton.leadingAnchor.constraint(equalTo: leadingAnchor),
             leftButton.centerYAnchor.constraint(equalTo: centerYAnchor),
             downButton.leadingAnchor.constraint(equalTo: leftButton.trailingAnchor, constant: 15),
@@ -44,7 +44,9 @@ class ControlsView: UIView {
             rightButton.leadingAnchor.constraint(equalTo: downButton.trailingAnchor, constant: 15),
             rightButton.trailingAnchor.constraint(equalTo: trailingAnchor),
             rightButton.centerYAnchor.constraint(equalTo: leftButton.centerYAnchor)
-        ].forEach { $0.isActive = true }
+        ]
+
+        NSLayoutConstraint.activate(constraints)
     }
 
     required init?(coder aDecoder: NSCoder) {
