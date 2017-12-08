@@ -27,6 +27,12 @@ protocol ScreenModelType: class {
 
     func spawnPig()
 
+    // MARK: - Birds API
+
+    func spawnBird()
+
+    func destroyBird(_ model: BirdModel)
+
     // MARK: - Observable API
 
     func add(observer: ScreenModelObserver)

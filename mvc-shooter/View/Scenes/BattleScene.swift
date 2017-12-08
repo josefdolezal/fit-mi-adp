@@ -36,13 +36,21 @@ class BattleScene: SKScene, ScreenModelObserver {
         fatalError("init(coder:) is not implemented, use init(model:) instead")
     }
 
+    // MARK: - User interaction
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touch = touches.first else { return }
+
+        model.spawnBird()
+    }
+
     // MARK: - ScreenModelObserver
 
     func modelChanged() {
         createMissingPigNodes()
+        createMissingBirdNodes()
 
         pigNodes.forEach { $0.redraw() }
-
         cannonNode.redraw()
     }
 
@@ -75,5 +83,24 @@ class BattleScene: SKScene, ScreenModelObserver {
 
         newNodes.forEach(addChild(_:))
         pigNodes.append(contentsOf: newNodes)
+    }
+
+    private func createMissingBirdNodes() {
+        let mappedModels = birdNodes.map { $0.model }
+        let unMappedModels = model.birds.filter { !mappedModels.contains($0) }
+        let newNodes = unMappedModels.map(BirdNode.init(model:))
+
+        let shootAction = SKAction.sequence([
+            SKAction.applyForce(.init(dx: 100, dy: 40), duration: 3),
+            SKAction.removeFromParent(),
+        ])
+
+        newNodes.enumerated().forEach { offset, node in
+            addChild(node)
+            node.run(SKAction.sequence([
+                SKAction.wait(forDuration: 0.3 * Double(offset)),
+                shootAction,
+            ]))
+        }
     }
 }

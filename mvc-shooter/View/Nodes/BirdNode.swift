@@ -12,23 +12,23 @@ class BirdNode: SKSpriteNode {
 
     private static let nodeName = "bird"
 
+    let model: BirdModel
+
     // MARK: - Initializers
 
-    init(position: CGPoint) {
+    init(model: BirdModel) {
         let texture = SKTexture(imageNamed: BirdNode.nodeName)
+
+        self.model = model
 
         super.init(texture: texture, color: .clear, size: texture.size())
 
+        self.position = CGPoint(x: model.locationX(), y: model.locationY())
         setupNodePhysics(texture: texture)
     }
 
     required init?(coder aDecoder: NSCoder) {
-        let texture = SKTexture(imageNamed: BirdNode.nodeName)
-
-        super.init(coder: aDecoder)
-
-        self.texture = texture
-        setupNodePhysics(texture: texture)
+        fatalError("init(coder:) not implemented, use init(model:) instead")
     }
 
     // MARK: - Private API
@@ -36,7 +36,7 @@ class BirdNode: SKSpriteNode {
     private func setupNodePhysics(texture: SKTexture) {
         let physicsBody = SKPhysicsBody(circleOfRadius: texture.size().width / 2)
 
-        physicsBody.affectedByGravity = false
+        physicsBody.affectedByGravity = true
         physicsBody.categoryBitMask = NodeCategory.bird.identifier
         physicsBody.collisionBitMask = NodeCategory.pig.identifier
 

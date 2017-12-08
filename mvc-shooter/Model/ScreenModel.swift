@@ -60,6 +60,23 @@ class ScreenModel: ScreenModelType {
         notifyObservers()
     }
 
+    // MARK: - Birds API
+
+    func spawnBird() {
+        let anchorPoint = Point(x: cannon.locationX(), y: cannon.locationY())
+        let birdModel = BirdModel(bird: Bird(location: anchorPoint))
+
+        birds.append(birdModel)
+
+        notifyObservers()
+    }
+
+    func destroyBird(_ model: BirdModel) {
+        guard let index = birds.index(of: model) else { return }
+
+        birds.remove(at: index)
+    }
+
     // MARK: - Observable API
 
     func add(observer: ScreenModelObserver) {

@@ -8,11 +8,29 @@
 
 import Foundation
 
-class BirdModel {
+class BirdModel: Equatable {
 
     private let bird: Bird
 
+    // MARK: - Initializers
+
     init(bird: Bird) {
         self.bird = bird
+    }
+
+    // MARK: - Location API
+
+    func locationX() -> Int {
+        return bird.location.x
+    }
+
+    func locationY() -> Int {
+        return bird.location.y
+    }
+
+    // MARK: - Equatable
+
+    static func ==(lhs: BirdModel, rhs: BirdModel) -> Bool {
+        return lhs === rhs
     }
 }
