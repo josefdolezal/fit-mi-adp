@@ -10,6 +10,7 @@
   typealias Image = UIImage
 #endif
 
+// swiftlint:disable superfluous_disable_command
 // swiftlint:disable file_length
 
 @available(*, deprecated, renamed: "ImageAsset")
@@ -43,33 +44,39 @@ struct ColorAsset {
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 enum Asset {
-  static let bird = ImageAsset(name: "bird")
-  static let cannon = ImageAsset(name: "cannon")
   enum Controls {
     static let arrowBottom = ImageAsset(name: "arrowBottom")
     static let arrowLeft = ImageAsset(name: "arrowLeft")
     static let arrowRight = ImageAsset(name: "arrowRight")
     static let arrowTop = ImageAsset(name: "arrowTop")
+    static let multiShootStrategy = ImageAsset(name: "multiShootStrategy")
+    static let singleShootStrategy = ImageAsset(name: "singleShootStrategy")
   }
-  static let piggyDamaged = ImageAsset(name: "piggy-damaged")
-  static let piggyHappy = ImageAsset(name: "piggy-happy")
-  static let piggyKo = ImageAsset(name: "piggy-ko")
-  static let piggyOk = ImageAsset(name: "piggy-ok")
+  enum Enemies {
+    static let piggyDamaged = ImageAsset(name: "piggy-damaged")
+    static let piggyHappy = ImageAsset(name: "piggy-happy")
+    static let piggyKo = ImageAsset(name: "piggy-ko")
+    static let piggyOk = ImageAsset(name: "piggy-ok")
+  }
+  static let bird = ImageAsset(name: "bird")
+  static let cannon = ImageAsset(name: "cannon")
 
   // swiftlint:disable trailing_comma
   static let allColors: [ColorAsset] = [
   ]
   static let allImages: [ImageAsset] = [
-    bird,
-    cannon,
     Controls.arrowBottom,
     Controls.arrowLeft,
     Controls.arrowRight,
     Controls.arrowTop,
-    piggyDamaged,
-    piggyHappy,
-    piggyKo,
-    piggyOk,
+    Controls.multiShootStrategy,
+    Controls.singleShootStrategy,
+    Enemies.piggyDamaged,
+    Enemies.piggyHappy,
+    Enemies.piggyKo,
+    Enemies.piggyOk,
+    bird,
+    cannon,
   ]
   // swiftlint:enable trailing_comma
   @available(*, deprecated, renamed: "allImages")
