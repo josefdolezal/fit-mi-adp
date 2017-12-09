@@ -15,7 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         let window = UIWindow(frame: UIScreen.main.bounds)
-        let model = ScreenModel()
+        let configuration = ScreenModelConfiguration(
+            maximumPigsCount: 10,
+            pigsSpawnFrequency: 3,
+            sceneWidth: 0,
+            sceneHeight: 0)
+        let model = ScreenModel(configuration: configuration)
         let controller = GameViewController(model: model)
 
         window.rootViewController = controller

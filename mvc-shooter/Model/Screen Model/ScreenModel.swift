@@ -10,16 +10,19 @@ import CoreGraphics
 
 class ScreenModel: ScreenModelType {
     let cannon: CannonModel
+    var configuration: ScreenModelConfiguration
     
-    private(set) var birds: [BirdModel]
-    private(set) var pigs: [PigModel]
     private var observers: [ScreenModelObserver]
 
-    init() {
+    private(set) var birds: [BirdModel]
+    private(set) var pigs: [PigModel]
+
+    init(configuration: ScreenModelConfiguration) {
         self.cannon = CannonModel(cannon: Cannon(location: .init(x: 0, y: 0 )))
+        self.observers = []
         self.birds = []
         self.pigs = []
-        self.observers = []
+        self.configuration = configuration
     }
 
     // MARK: - Cannon API
@@ -51,8 +54,10 @@ class ScreenModel: ScreenModelType {
     // MARK: - Piggies API
 
     func spawnPig() {
-        let randomX = Random.next(upperBound: 400)
-        let randomY = Random.next(upperBound: 200)
+        guard pigs.count < configuration.maximumPigsCount else { return }
+
+        let randomX = Random.next(upperBound: configuration.sceneWidth)
+        let randomY = Random.next(upperBound: configuration.sceneHeight)
         let pigModel = PigModel(pig: Pig(x: randomX, y: randomY))
 
         pigs.append(pigModel)

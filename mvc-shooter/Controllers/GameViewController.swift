@@ -56,6 +56,9 @@ class GameViewController: BaseGameViewController {
         view.layoutIfNeeded()
 
         battleSceen.size = skView.bounds.size
+        model.configuration.sceneHeight = Int(battleSceen.size.height)
+        model.configuration.sceneWidth = Int(battleSceen.size.width)
+
         bindControls()
     }
 

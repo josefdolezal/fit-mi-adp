@@ -25,6 +25,7 @@
 		D20E332F1F896F250039A027 /* CGPoint+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E332E1F896F250039A027 /* CGPoint+Distance.swift */; };
 		D20E33331F8971A40039A027 /* CGPoint+DistanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E33321F8971A40039A027 /* CGPoint+DistanceTests.swift */; };
 		D24F633F1FDBEF9C002287CE /* SceneRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F633E1FDBEF9C002287CE /* SceneRenderer.swift */; };
+		D24F63421FDC01EB002287CE /* ScreenModelConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F63411FDC01EB002287CE /* ScreenModelConfiguration.swift */; };
 		D26029BB1FA76E0C00CF49E7 /* ScreenModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26029BA1FA76E0C00CF49E7 /* ScreenModelType.swift */; };
 		D26029BE1FA7C6D100CF49E7 /* ScreenModelObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26029BD1FA7C6D100CF49E7 /* ScreenModelObserver.swift */; };
 		D26029C11FA7C7D900CF49E7 /* ScreenModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26029C01FA7C7D900CF49E7 /* ScreenModelTests.swift */; };
@@ -69,6 +70,7 @@
 		D20E332E1F896F250039A027 /* CGPoint+Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Distance.swift"; sourceTree = "<group>"; };
 		D20E33321F8971A40039A027 /* CGPoint+DistanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+DistanceTests.swift"; sourceTree = "<group>"; };
 		D24F633E1FDBEF9C002287CE /* SceneRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneRenderer.swift; sourceTree = "<group>"; };
+		D24F63411FDC01EB002287CE /* ScreenModelConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModelConfiguration.swift; sourceTree = "<group>"; };
 		D26029BA1FA76E0C00CF49E7 /* ScreenModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModelType.swift; sourceTree = "<group>"; };
 		D26029BD1FA7C6D100CF49E7 /* ScreenModelObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModelObserver.swift; sourceTree = "<group>"; };
 		D26029C01FA7C7D900CF49E7 /* ScreenModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModelTests.swift; sourceTree = "<group>"; };
@@ -128,6 +130,17 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		D24F63401FDC01C9002287CE /* Screen Model */ = {
+			isa = PBXGroup;
+			children = (
+				D2C1567E1FA7336A009BFB28 /* ScreenModel.swift */,
+				D26029BA1FA76E0C00CF49E7 /* ScreenModelType.swift */,
+				D26029BD1FA7C6D100CF49E7 /* ScreenModelObserver.swift */,
+				D24F63411FDC01EB002287CE /* ScreenModelConfiguration.swift */,
+			);
+			path = "Screen Model";
+			sourceTree = "<group>";
+		};
 		D26029BF1FA7C7BE00CF49E7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,10 +172,8 @@
 		D2C1567A1FA732D9009BFB28 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D24F63401FDC01C9002287CE /* Screen Model */,
 				D2C1567B1FA732E2009BFB28 /* Game Objects */,
-				D2C1567E1FA7336A009BFB28 /* ScreenModel.swift */,
-				D26029BA1FA76E0C00CF49E7 /* ScreenModelType.swift */,
-				D26029BD1FA7C6D100CF49E7 /* ScreenModelObserver.swift */,
 				D2C682CE1FDAFCB0002487CF /* Point.swift */,
 			);
 			path = Model;
@@ -406,6 +417,7 @@
 				D2B2DAC31FDACAE20023C5BF /* BattleScene.swift in Sources */,
 				D2B2DAB81FDA95130023C5BF /* BirdNode.swift in Sources */,
 				D26FE4B51FCAF7FE0023B71D /* GameObjectVisitor.swift in Sources */,
+				D24F63421FDC01EB002287CE /* ScreenModelConfiguration.swift in Sources */,
 				D2C156871FA73401009BFB28 /* PigModel.swift in Sources */,
 				D2C1567D1FA73301009BFB28 /* GameObject.swift in Sources */,
 				D26FE4B71FCAF99C0023B71D /* GameObjectModelVisitable.swift in Sources */,

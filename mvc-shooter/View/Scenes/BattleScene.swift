@@ -10,11 +10,6 @@ import SpriteKit
 
 class BattleScene: SKScene, ScreenModelObserver {
 
-    enum Constants {
-        static let maximumEnemies = 8
-        static let enemySpawnInterval: TimeInterval = 3
-    }
-
     private let model: ScreenModelType
     lazy var sceneRenderer = SceneRenderer(scene: self)
 
@@ -55,7 +50,7 @@ class BattleScene: SKScene, ScreenModelObserver {
 
         // Spawn automatically new enemies
         let spawnAction = SKAction.repeatForever(SKAction.sequence([
-            SKAction.wait(forDuration: Constants.enemySpawnInterval),
+            SKAction.wait(forDuration: model.configuration.pigsSpawnFrequency),
             SKAction.run(spawnPig)
         ]))
 
