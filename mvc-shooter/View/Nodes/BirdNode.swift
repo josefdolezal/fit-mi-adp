@@ -38,7 +38,7 @@ class BirdNode: SKSpriteNode {
 
         physicsBody.affectedByGravity = true
         physicsBody.categoryBitMask = NodeCategory.bird.identifier
-        physicsBody.collisionBitMask = NodeCategory.pig.identifier
+        physicsBody.contactTestBitMask = NodeCategory.pig.identifier
 
         self.physicsBody = physicsBody
     }

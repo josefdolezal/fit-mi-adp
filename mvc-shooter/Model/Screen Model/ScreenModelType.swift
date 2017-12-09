@@ -29,6 +29,8 @@ protocol ScreenModelType: class, GameObjectModelVisitable {
 
     func spawnPig()
 
+    func destroyPig(_ model: PigModel)
+
     // MARK: - Birds API
 
     func spawnBird()

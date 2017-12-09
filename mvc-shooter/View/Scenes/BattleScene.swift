@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class BattleScene: SKScene, ScreenModelObserver {
+class BattleScene: SKScene, ScreenModelObserver, SKPhysicsContactDelegate {
 
     private let model: ScreenModelType
     lazy var sceneRenderer = SceneRenderer(scene: self)
@@ -19,12 +19,18 @@ class BattleScene: SKScene, ScreenModelObserver {
         self.model = model
 
         super.init(size: .zero)
-
-        setup()
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) is not implemented, use init(model:) instead")
+    }
+
+    // MARK: Scene lifecycle
+
+    override func didMove(to view: SKView) {
+        super.didMove(to: view)
+
+        setup()
     }
 
     // MARK: - User interaction
@@ -43,9 +49,31 @@ class BattleScene: SKScene, ScreenModelObserver {
         model.pigs.forEach { $0.accept(visitor: sceneRenderer) }
     }
 
+    // MARK: - SKPhysicsContactDelegate
+
+    func didBegin(_ contact: SKPhysicsContact) {
+        if
+            let bird = contact.bodyA.node as? BirdNode,
+            let pig = contact.bodyB.node as? PigNode
+        {
+            makeCollision(between: bird, and: pig)
+            return
+        }
+
+        if
+            let pig = contact.bodyA.node as? PigNode,
+            let bird = contact.bodyB.node as? BirdNode
+        {
+            makeCollision(between: bird, and: pig)
+            return
+        }
+
+    }
+
     // MARK: - Private API
 
     private func setup() {
+        physicsWorld.contactDelegate = self
         model.add(observer: self)
 
         // Spawn automatically new enemies
@@ -59,5 +87,13 @@ class BattleScene: SKScene, ScreenModelObserver {
 
     private func spawnPig() {
         model.spawnPig()
+    }
+
+    private func makeCollision(between bird: BirdNode, and pig: PigNode) {
+        model.destroyPig(pig.model)
+        model.destroyBird(bird.model)
+
+        pig.removeFromParent()
+        bird.removeFromParent()
     }
 }

@@ -65,6 +65,12 @@ class ScreenModel: ScreenModelType {
         notifyObservers()
     }
 
+    func destroyPig(_ model: PigModel) {
+        guard let index = pigs.index(of: model) else { return }
+
+        pigs.remove(at: index)
+    }
+
     // MARK: - Birds API
 
     func spawnBird() {

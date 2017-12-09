@@ -45,8 +45,9 @@ class PigNode: SKSpriteNode {
         let physicsBody = SKPhysicsBody(circleOfRadius: texture.size().width / 2)
 
         physicsBody.affectedByGravity = false
+        physicsBody.isDynamic = false
         physicsBody.categoryBitMask = NodeCategory.pig.identifier
-        physicsBody.collisionBitMask = NodeCategory.bird.identifier
+        physicsBody.contactTestBitMask = NodeCategory.bird.identifier
 
         self.physicsBody = physicsBody
     }
