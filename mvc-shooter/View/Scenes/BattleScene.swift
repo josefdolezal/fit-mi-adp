@@ -47,9 +47,7 @@ class BattleScene: SKScene, ScreenModelObserver, SKPhysicsContactDelegate {
     // MARK: - ScreenModelObserver
 
     func modelChanged() {
-        model.cannon.accept(visitor: sceneRenderer)
-        model.birds.forEach { $0.accept(visitor: sceneRenderer) }
-        model.pigs.forEach { $0.accept(visitor: sceneRenderer) }
+        model.accept(visitor: sceneRenderer)
     }
 
     // MARK: - SKPhysicsContactDelegate
@@ -70,7 +68,6 @@ class BattleScene: SKScene, ScreenModelObserver, SKPhysicsContactDelegate {
             makeCollision(between: bird, and: pig)
             return
         }
-
     }
 
     // MARK: - Private API

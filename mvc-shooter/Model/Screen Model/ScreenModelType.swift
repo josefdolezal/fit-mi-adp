@@ -11,10 +11,6 @@ import Foundation
 protocol ScreenModelType: class, GameObjectModelVisitable {
     var configuration: ScreenModelConfiguration { get set }
 
-    var cannon: CannonModel { get }
-    var pigs: [PigModel] { get }
-    var birds: [BirdModel] { get }
-
     // MARK: - Cannon API
 
     func moveCannonLeft()

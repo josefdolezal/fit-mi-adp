@@ -8,25 +8,17 @@
 
 import CoreGraphics
 
-class ScreenModel: ScreenModelType {
+class ScreenModel: ScreenModelType, GameObjectModelVisitable {
 
-    struct Preferences {
-        static let maximumInpulsX: Double = 15
-        static let maximumInpulsY: Double = 12
-    }
-
-    let cannon: CannonModel
     var configuration: ScreenModelConfiguration
-    
-    private var observers: [ScreenModelObserver]
 
-    private(set) var birds: [BirdModel]
-    private(set) var pigs: [PigModel]
+    private var observers: [ScreenModelObserver]
+    private let cannon: CannonModel
+    private var pigs: [PigModel]
 
     init(configuration: ScreenModelConfiguration) {
         self.cannon = CannonModel(cannon: Cannon(location: .init(x: 20, y: Int(configuration.sceneHeight/2))))
         self.observers = []
-        self.birds = []
         self.pigs = []
         self.configuration = configuration
     }
@@ -80,19 +72,14 @@ class ScreenModel: ScreenModelType {
     // MARK: - Birds API
 
     func spawnBird(direction: Point) {
-        let anchorPoint = Point(x: cannon.locationX(), y: cannon.locationY())
-        let impuls = birdImpulse(in: direction)
-        let birdModel = BirdModel(bird: Bird(location: anchorPoint), impuls: impuls)
-
-        birds.append(birdModel)
+        cannon.shootBird(in: direction, widthBoundary: configuration.sceneWidth,
+                         heightBoundary: configuration.sceneHeight)
 
         notifyObservers()
     }
 
     func destroyBird(_ model: BirdModel) {
-        guard let index = birds.index(of: model) else { return }
-
-        birds.remove(at: index)
+        cannon.destroyBird(model)
     }
 
     // MARK: - Observable API
@@ -113,15 +100,6 @@ class ScreenModel: ScreenModelType {
 
     func accept(visitor: GameObjectVisitor) {
         cannon.accept(visitor: visitor)
-        birds.forEach { $0.accept(visitor: visitor) }
         pigs.forEach { $0.accept(visitor: visitor) }
-    }
-
-    // MARK: - Computations
-
-    private func birdImpulse(in direction: Point) -> Vector {
-        return Vector(
-            dx: (Double(direction.x) / Double(configuration.sceneWidth) * Preferences.maximumInpulsX),
-            dy: (Double(direction.y) / Double(configuration.sceneHeight) * Preferences.maximumInpulsY))
     }
 }
