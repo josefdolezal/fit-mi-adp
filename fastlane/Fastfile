@@ -22,7 +22,7 @@ platform :ios do
   lane :build do
     scan
     xcodebuild(
-      configuration: "Debug",
+      configuration: "Simple",
       xcargs: "CODE_SIGN_IDENTITY=\"\" CODE_SIGNING_REQUIRED=NO"
     )
   end
