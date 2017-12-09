@@ -71,7 +71,7 @@ class SceneRenderer: GameObjectVisitor {
 
             birdNodes.append(node)
             scene.addChild(node)
-
+            node.physicsBody?.applyImpulse(.init(dx: model.force(), dy: model.directionAngle()))
             return node
         }
 
@@ -89,20 +89,5 @@ class SceneRenderer: GameObjectVisitor {
         }
 
         return node
-    }
-
-    private func createMissingBirdNodes() {
-//        let shootAction = SKAction.sequence([
-//            SKAction.applyForce(.init(dx: 100, dy: 40), duration: 3),
-//            SKAction.removeFromParent(),
-//            ])
-//
-//        newNodes.enumerated().forEach { offset, node in
-//            addChild(node)
-//            node.run(SKAction.sequence([
-//                SKAction.wait(forDuration: 0.3 * Double(offset)),
-//                shootAction,
-//                ]))
-//        }
     }
 }

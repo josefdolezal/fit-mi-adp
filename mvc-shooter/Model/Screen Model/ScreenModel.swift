@@ -9,6 +9,12 @@
 import CoreGraphics
 
 class ScreenModel: ScreenModelType {
+
+    struct Preferences {
+        static let maximumInpulsX: Double = 15
+        static let maximumInpulsY: Double = 12
+    }
+
     let cannon: CannonModel
     var configuration: ScreenModelConfiguration
     
@@ -73,9 +79,10 @@ class ScreenModel: ScreenModelType {
 
     // MARK: - Birds API
 
-    func spawnBird() {
+    func spawnBird(direction: Point) {
         let anchorPoint = Point(x: cannon.locationX(), y: cannon.locationY())
-        let birdModel = BirdModel(bird: Bird(location: anchorPoint))
+        let impuls = birdImpulse(in: direction)
+        let birdModel = BirdModel(bird: Bird(location: anchorPoint), impuls: impuls)
 
         birds.append(birdModel)
 
@@ -108,5 +115,13 @@ class ScreenModel: ScreenModelType {
         cannon.accept(visitor: visitor)
         birds.forEach { $0.accept(visitor: visitor) }
         pigs.forEach { $0.accept(visitor: visitor) }
+    }
+
+    // MARK: - Computations
+
+    private func birdImpulse(in direction: Point) -> Vector {
+        return Vector(
+            dx: (Double(direction.x) / Double(configuration.sceneWidth) * Preferences.maximumInpulsX),
+            dy: (Double(direction.y) / Double(configuration.sceneHeight) * Preferences.maximumInpulsY))
     }
 }

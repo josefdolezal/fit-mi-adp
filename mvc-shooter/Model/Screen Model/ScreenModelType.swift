@@ -33,7 +33,7 @@ protocol ScreenModelType: class, GameObjectModelVisitable {
 
     // MARK: - Birds API
 
-    func spawnBird()
+    func spawnBird(direction: Point)
 
     func destroyBird(_ model: BirdModel)
 

@@ -38,7 +38,10 @@ class BattleScene: SKScene, ScreenModelObserver, SKPhysicsContactDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
 
-        model.spawnBird()
+        let location = touch.location(in: self)
+        let point = Point(x: Int(location.x), y: Int(location.y))
+
+        model.spawnBird(direction: point)
     }
 
     // MARK: - ScreenModelObserver

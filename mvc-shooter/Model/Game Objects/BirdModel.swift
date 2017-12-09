@@ -11,11 +11,13 @@ import Foundation
 class BirdModel: GameObjectModelVisitable, Equatable {
 
     private let bird: Bird
+    private let impuls: Vector
 
     // MARK: - Initializers
 
-    init(bird: Bird) {
+    init(bird: Bird, impuls: Vector) {
         self.bird = bird
+        self.impuls = impuls
     }
 
     // MARK: - Location API
@@ -26,6 +28,14 @@ class BirdModel: GameObjectModelVisitable, Equatable {
 
     func locationY() -> Int {
         return bird.location.y
+    }
+
+    func directionAngle() -> Double {
+        return impuls.dy
+    }
+
+    func force() -> Double {
+        return impuls.dx
     }
 
     // MARK: GameObjectModelVisitable

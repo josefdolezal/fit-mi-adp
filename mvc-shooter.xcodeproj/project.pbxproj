@@ -26,6 +26,7 @@
 		D20E33331F8971A40039A027 /* CGPoint+DistanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E33321F8971A40039A027 /* CGPoint+DistanceTests.swift */; };
 		D24F633F1FDBEF9C002287CE /* SceneRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F633E1FDBEF9C002287CE /* SceneRenderer.swift */; };
 		D24F63421FDC01EB002287CE /* ScreenModelConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F63411FDC01EB002287CE /* ScreenModelConfiguration.swift */; };
+		D24F634D1FDC2CAB002287CE /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F634C1FDC2CAB002287CE /* Vector.swift */; };
 		D26029BB1FA76E0C00CF49E7 /* ScreenModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26029BA1FA76E0C00CF49E7 /* ScreenModelType.swift */; };
 		D26029BE1FA7C6D100CF49E7 /* ScreenModelObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26029BD1FA7C6D100CF49E7 /* ScreenModelObserver.swift */; };
 		D26029C11FA7C7D900CF49E7 /* ScreenModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26029C01FA7C7D900CF49E7 /* ScreenModelTests.swift */; };
@@ -71,6 +72,7 @@
 		D20E33321F8971A40039A027 /* CGPoint+DistanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+DistanceTests.swift"; sourceTree = "<group>"; };
 		D24F633E1FDBEF9C002287CE /* SceneRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneRenderer.swift; sourceTree = "<group>"; };
 		D24F63411FDC01EB002287CE /* ScreenModelConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModelConfiguration.swift; sourceTree = "<group>"; };
+		D24F634C1FDC2CAB002287CE /* Vector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vector.swift; sourceTree = "<group>"; };
 		D26029BA1FA76E0C00CF49E7 /* ScreenModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModelType.swift; sourceTree = "<group>"; };
 		D26029BD1FA7C6D100CF49E7 /* ScreenModelObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModelObserver.swift; sourceTree = "<group>"; };
 		D26029C01FA7C7D900CF49E7 /* ScreenModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModelTests.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				D24F63401FDC01C9002287CE /* Screen Model */,
 				D2C1567B1FA732E2009BFB28 /* Game Objects */,
 				D2C682CE1FDAFCB0002487CF /* Point.swift */,
+				D24F634C1FDC2CAB002287CE /* Vector.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 				D26FE4B51FCAF7FE0023B71D /* GameObjectVisitor.swift in Sources */,
 				D24F63421FDC01EB002287CE /* ScreenModelConfiguration.swift in Sources */,
 				D2C156871FA73401009BFB28 /* PigModel.swift in Sources */,
+				D24F634D1FDC2CAB002287CE /* Vector.swift in Sources */,
 				D2C1567D1FA73301009BFB28 /* GameObject.swift in Sources */,
 				D26FE4B71FCAF99C0023B71D /* GameObjectModelVisitable.swift in Sources */,
 				D2C1568B1FA734B0009BFB28 /* BirdModel.swift in Sources */,
