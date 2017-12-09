@@ -15,12 +15,14 @@ class GameViewController: BaseGameViewController {
     private let model: ScreenModelType
     private let controlsView: ControlsView
     private let battleSceen: BattleScene
+    private let strategyControlsView: StrategyControlsView
 
     // MARK: - Initializers
 
     init(model: ScreenModelType) {
         self.model = model
         self.controlsView = ControlsView()
+        self.strategyControlsView = StrategyControlsView()
         self.battleSceen = BattleScene(model: model)
 
         super.init(nibName: nil, bundle: nil)
@@ -44,7 +46,16 @@ class GameViewController: BaseGameViewController {
             controlsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15)
         ])
 
-        // MARK: SpriteKit Scene
+        // MARK: StrategyControlsView
+
+        view.addSubview(strategyControlsView)
+        strategyControlsView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            strategyControlsView.topAnchor.constraint(equalTo: view.topAnchor, constant: 15),
+            strategyControlsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15)
+        ])
+
+        // MARK: BattleScene & SKView
 
         skView.showsNodeCount = true
         skView.showsFPS = true
@@ -86,6 +97,16 @@ class GameViewController: BaseGameViewController {
         model.moveCannonDown()
     }
 
+    @objc
+    func multiShootStrategyTapped() {
+
+    }
+
+    @objc
+    func singleShootStrategyTapped() {
+
+    }
+
     // MARK: - Private API
 
     private func bindControls() {
@@ -93,5 +114,8 @@ class GameViewController: BaseGameViewController {
         controlsView.rightButton.addTarget(self, action: #selector(rightButtonTapped), for: .touchUpInside)
         controlsView.upButton.addTarget(self, action: #selector(upButtonTapped), for: .touchUpInside)
         controlsView.downButton.addTarget(self, action: #selector(downButtonTapped), for: .touchUpInside)
+
+        strategyControlsView.multiShootButton.addTarget(self, action: #selector(singleShootStrategyTapped), for: .touchUpInside)
+        strategyControlsView.singleShootButton.addTarget(self, action: #selector(singleShootStrategyTapped), for: .touchUpInside)
     }
 }
