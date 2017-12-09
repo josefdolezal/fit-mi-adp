@@ -90,4 +90,12 @@ class ScreenModel: ScreenModelType {
     private func notifyObservers() {
         observers.forEach { $0.modelChanged() }
     }
+
+    // MARK: GameObjectModelVisitable
+
+    func accept(visitor: GameObjectVisitor) {
+        cannon.accept(visitor: visitor)
+        birds.forEach { $0.accept(visitor: visitor) }
+        pigs.forEach { $0.accept(visitor: visitor) }
+    }
 }

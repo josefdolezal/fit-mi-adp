@@ -8,8 +8,7 @@
 
 import Foundation
 
-class PigModel: Equatable {
-
+class PigModel: GameObjectModelVisitable, Equatable {
     private let pig: Pig
 
     init(pig: Pig) {
@@ -24,6 +23,12 @@ class PigModel: Equatable {
 
     func locationY() -> Int {
         return pig.location.y
+    }
+
+    // MARK: GameObjectModelVisitable
+
+    func accept(visitor: GameObjectVisitor) {
+        visitor.visit(object: self)
     }
 
     // MARK: - Equatable

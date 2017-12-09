@@ -8,7 +8,7 @@
 
 import Foundation
 
-class BirdModel: Equatable {
+class BirdModel: GameObjectModelVisitable, Equatable {
 
     private let bird: Bird
 
@@ -26,6 +26,12 @@ class BirdModel: Equatable {
 
     func locationY() -> Int {
         return bird.location.y
+    }
+
+    // MARK: GameObjectModelVisitable
+
+    func accept(visitor: GameObjectVisitor) {
+        visitor.visit(object: self)
     }
 
     // MARK: - Equatable

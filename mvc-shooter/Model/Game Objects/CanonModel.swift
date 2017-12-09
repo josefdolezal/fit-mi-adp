@@ -8,8 +8,7 @@
 
 import Foundation
 
-class CannonModel {
-
+class CannonModel: GameObjectModelVisitable {
     private let cannon: Cannon
 
     private enum Constants {
@@ -46,5 +45,11 @@ class CannonModel {
 
     func moveCannonDown() {
         cannon.location.y -= Constants.step
+    }
+
+    // MARK: GameObjectVisitable
+
+    func accept(visitor: GameObjectVisitor) {
+        visitor.visit(object: self)
     }
 }
