@@ -46,6 +46,8 @@ class GameViewController: BaseGameViewController {
 
         // MARK: SpriteKit Scene
 
+        skView.showsNodeCount = true
+        skView.showsFPS = true
         skView.contentMode = .scaleAspectFill
         skView.presentScene(battleSceen)
     }
