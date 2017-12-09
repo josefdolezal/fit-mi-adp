@@ -24,16 +24,17 @@
 		D20A7A241FA9226100DD88F0 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20A7A231FA9226100DD88F0 /* ControlsView.swift */; };
 		D20E332F1F896F250039A027 /* CGPoint+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E332E1F896F250039A027 /* CGPoint+Distance.swift */; };
 		D20E33331F8971A40039A027 /* CGPoint+DistanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E33321F8971A40039A027 /* CGPoint+DistanceTests.swift */; };
+		D24F633F1FDBEF9C002287CE /* SceneRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F633E1FDBEF9C002287CE /* SceneRenderer.swift */; };
 		D26029BB1FA76E0C00CF49E7 /* ScreenModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26029BA1FA76E0C00CF49E7 /* ScreenModelType.swift */; };
 		D26029BE1FA7C6D100CF49E7 /* ScreenModelObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26029BD1FA7C6D100CF49E7 /* ScreenModelObserver.swift */; };
 		D26029C11FA7C7D900CF49E7 /* ScreenModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26029C01FA7C7D900CF49E7 /* ScreenModelTests.swift */; };
+		D26FE4B51FCAF7FE0023B71D /* GameObjectVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26FE4B41FCAF7FE0023B71D /* GameObjectVisitor.swift */; };
+		D26FE4B71FCAF99C0023B71D /* GameObjectModelVisitable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26FE4B61FCAF99C0023B71D /* GameObjectModelVisitable.swift */; };
 		D2B2DAB61FDA95000023C5BF /* CannonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B2DAB51FDA95000023C5BF /* CannonNode.swift */; };
 		D2B2DAB81FDA95130023C5BF /* BirdNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B2DAB71FDA95130023C5BF /* BirdNode.swift */; };
 		D2B2DABA1FDA951E0023C5BF /* PigNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B2DAB91FDA951E0023C5BF /* PigNode.swift */; };
 		D2B2DABE1FDA98800023C5BF /* NodeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B2DABD1FDA98800023C5BF /* NodeCategory.swift */; };
 		D2B2DAC31FDACAE20023C5BF /* BattleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B2DAC21FDACAE20023C5BF /* BattleScene.swift */; };
-		D26FE4B51FCAF7FE0023B71D /* GameObjectVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26FE4B41FCAF7FE0023B71D /* GameObjectVisitor.swift */; };
-		D26FE4B71FCAF99C0023B71D /* GameObjectModelVisitable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26FE4B61FCAF99C0023B71D /* GameObjectModelVisitable.swift */; };
 		D2C1567D1FA73301009BFB28 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C1567C1FA73301009BFB28 /* GameObject.swift */; };
 		D2C1567F1FA7336A009BFB28 /* ScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C1567E1FA7336A009BFB28 /* ScreenModel.swift */; };
 		D2C156811FA73395009BFB28 /* Canon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C156801FA73395009BFB28 /* Canon.swift */; };
@@ -67,16 +68,17 @@
 		D20A7A231FA9226100DD88F0 /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
 		D20E332E1F896F250039A027 /* CGPoint+Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Distance.swift"; sourceTree = "<group>"; };
 		D20E33321F8971A40039A027 /* CGPoint+DistanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+DistanceTests.swift"; sourceTree = "<group>"; };
+		D24F633E1FDBEF9C002287CE /* SceneRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneRenderer.swift; sourceTree = "<group>"; };
 		D26029BA1FA76E0C00CF49E7 /* ScreenModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModelType.swift; sourceTree = "<group>"; };
 		D26029BD1FA7C6D100CF49E7 /* ScreenModelObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModelObserver.swift; sourceTree = "<group>"; };
 		D26029C01FA7C7D900CF49E7 /* ScreenModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModelTests.swift; sourceTree = "<group>"; };
+		D26FE4B41FCAF7FE0023B71D /* GameObjectVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObjectVisitor.swift; sourceTree = "<group>"; };
+		D26FE4B61FCAF99C0023B71D /* GameObjectModelVisitable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObjectModelVisitable.swift; sourceTree = "<group>"; };
 		D2B2DAB51FDA95000023C5BF /* CannonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CannonNode.swift; sourceTree = "<group>"; };
 		D2B2DAB71FDA95130023C5BF /* BirdNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdNode.swift; sourceTree = "<group>"; };
 		D2B2DAB91FDA951E0023C5BF /* PigNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PigNode.swift; sourceTree = "<group>"; };
 		D2B2DABD1FDA98800023C5BF /* NodeCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeCategory.swift; sourceTree = "<group>"; };
 		D2B2DAC21FDACAE20023C5BF /* BattleScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleScene.swift; sourceTree = "<group>"; };
-		D26FE4B41FCAF7FE0023B71D /* GameObjectVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObjectVisitor.swift; sourceTree = "<group>"; };
-		D26FE4B61FCAF99C0023B71D /* GameObjectModelVisitable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObjectModelVisitable.swift; sourceTree = "<group>"; };
 		D2C1567C1FA73301009BFB28 /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
 		D2C1567E1FA7336A009BFB28 /* ScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModel.swift; sourceTree = "<group>"; };
 		D2C156801FA73395009BFB28 /* Canon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canon.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				D2B2DAC21FDACAE20023C5BF /* BattleScene.swift */,
+				D24F633E1FDBEF9C002287CE /* SceneRenderer.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				D26FE4B71FCAF99C0023B71D /* GameObjectModelVisitable.swift in Sources */,
 				D2C1568B1FA734B0009BFB28 /* BirdModel.swift in Sources */,
 				D2C156851FA733E5009BFB28 /* Pig.swift in Sources */,
+				D24F633F1FDBEF9C002287CE /* SceneRenderer.swift in Sources */,
 				D2C156811FA73395009BFB28 /* Canon.swift in Sources */,
 				D2F345811F86AF1500ED4E6A /* GameViewController.swift in Sources */,
 				D2C156831FA733A2009BFB28 /* CanonModel.swift in Sources */,

@@ -16,16 +16,12 @@ class BattleScene: SKScene, ScreenModelObserver {
     }
 
     private let model: ScreenModelType
-
-    private let cannonNode: CannonNode
-    private var pigNodes = [PigNode]()
-    private var birdNodes = [BirdNode]()
+    lazy var sceneRenderer = SceneRenderer(scene: self)
 
     // MARK: - Initializers
 
     init(model: ScreenModelType) {
         self.model = model
-        self.cannonNode = CannonNode(model: model.cannon)
 
         super.init(size: .zero)
 
@@ -47,18 +43,14 @@ class BattleScene: SKScene, ScreenModelObserver {
     // MARK: - ScreenModelObserver
 
     func modelChanged() {
-        createMissingPigNodes()
-        createMissingBirdNodes()
-
-        pigNodes.forEach { $0.redraw() }
-        cannonNode.redraw()
+        model.cannon.accept(visitor: sceneRenderer)
+        model.birds.forEach { $0.accept(visitor: sceneRenderer) }
+        model.pigs.forEach { $0.accept(visitor: sceneRenderer) }
     }
 
     // MARK: - Private API
 
     private func setup() {
-        addChild(cannonNode)
-
         model.add(observer: self)
 
         // Spawn automatically new enemies
@@ -72,35 +64,5 @@ class BattleScene: SKScene, ScreenModelObserver {
 
     private func spawnPig() {
         model.spawnPig()
-    }
-
-    // MARK: - Drawing mapping
-
-    private func createMissingPigNodes() {
-        let mappedModels = pigNodes.map { $0.model }
-        let unMappedModels = model.pigs.filter { !mappedModels.contains($0) }
-        let newNodes = unMappedModels.map(PigNode.init(model:))
-
-        newNodes.forEach(addChild(_:))
-        pigNodes.append(contentsOf: newNodes)
-    }
-
-    private func createMissingBirdNodes() {
-        let mappedModels = birdNodes.map { $0.model }
-        let unMappedModels = model.birds.filter { !mappedModels.contains($0) }
-        let newNodes = unMappedModels.map(BirdNode.init(model:))
-
-        let shootAction = SKAction.sequence([
-            SKAction.applyForce(.init(dx: 100, dy: 40), duration: 3),
-            SKAction.removeFromParent(),
-        ])
-
-        newNodes.enumerated().forEach { offset, node in
-            addChild(node)
-            node.run(SKAction.sequence([
-                SKAction.wait(forDuration: 0.3 * Double(offset)),
-                shootAction,
-            ]))
-        }
     }
 }
