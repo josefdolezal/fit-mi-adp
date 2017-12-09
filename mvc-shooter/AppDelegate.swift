@@ -18,8 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let configuration = ScreenModelConfiguration(
             maximumPigsCount: 10,
             pigsSpawnFrequency: 3,
-            sceneWidth: 0,
-            sceneHeight: 0)
+            sceneWidth: Int(UIScreen.main.bounds.width),
+            sceneHeight: Int(UIScreen.main.bounds.height))
         let model = ScreenModel(configuration: configuration)
         let controller = GameViewController(model: model)
 

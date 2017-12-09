@@ -18,7 +18,7 @@ class ScreenModel: ScreenModelType {
     private(set) var pigs: [PigModel]
 
     init(configuration: ScreenModelConfiguration) {
-        self.cannon = CannonModel(cannon: Cannon(location: .init(x: 0, y: 0 )))
+        self.cannon = CannonModel(cannon: Cannon(location: .init(x: 20, y: Int(configuration.sceneHeight/2))))
         self.observers = []
         self.birds = []
         self.pigs = []
