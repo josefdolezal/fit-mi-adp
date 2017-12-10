@@ -10,13 +10,9 @@ import Foundation
 
 class CannonModel: GameObjectModelVisitable {
 
-    struct Preferences {
-        static let maximumInpulsX: Double = 15
-        static let maximumInpulsY: Double = 12
-    }
-
     private let cannon: Cannon
     private var birds = [BirdModel]()
+    private var shootingState: ShootingState = SingleShootState()
 
     private enum Constants {
         static let step = 5
@@ -38,12 +34,15 @@ class CannonModel: GameObjectModelVisitable {
 
     // MARK: - Shooting API
 
-    func shootBird(in direction: Point, widthBoundary: Int, heightBoundary: Int) {
-        let impuls = birdImpulse(in: direction, boundary: widthBoundary, height: heightBoundary)
-        let birdModel = BirdModel(bird: Bird(location: cannon.location),
-                                  impuls: impuls)
+    func useShootingState(_ shootingState: ShootingState) {
+        self.shootingState = shootingState
+    }
 
-        birds.append(birdModel)
+    func shootBird(in direction: Point, widthBoundary: Int, heightBoundary: Int) {
+        let newBirds = shootingState.shoot(from: cannon.location, in: direction,
+                                           boundary: widthBoundary, height: heightBoundary)
+
+        birds.append(contentsOf: newBirds)
     }
 
     func destroyBird(_ model: BirdModel) {
@@ -76,13 +75,5 @@ class CannonModel: GameObjectModelVisitable {
         visitor.visit(object: self)
 
         birds.forEach { $0.accept(visitor: visitor) }
-    }
-
-    // MARK: - Computations
-
-    private func birdImpulse(in direction: Point, boundary width: Int, height: Int) -> Vector {
-        return Vector(
-            dx: (Double(direction.x) / Double(width) * Preferences.maximumInpulsX),
-            dy: (Double(direction.y) / Double(height) * Preferences.maximumInpulsY))
     }
 }

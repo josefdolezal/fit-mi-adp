@@ -1,5 +1,5 @@
 //
-//  StrategyControlsView.swift
+//  StateControlsView.swift
 //  mvc-shooter
 //
 //  Created by Josef Dolezal on 09/12/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StrategyControlsView: UIView {
+class StateControlsView: UIView {
 
     let multiShootButton: UIButton
     let singleShootButton: UIButton
@@ -16,8 +16,8 @@ class StrategyControlsView: UIView {
     // MARK: - Initializers
 
     override init(frame: CGRect) {
-        self.multiShootButton = StrategyControlsView.shootButton(asset: Asset.Controls.multiShootStrategy)
-        self.singleShootButton = StrategyControlsView.shootButton(asset: Asset.Controls.singleShootStrategy)
+        self.multiShootButton = StateControlsView.shootButton(asset: Asset.Controls.multiShootStrategy)
+        self.singleShootButton = StateControlsView.shootButton(asset: Asset.Controls.singleShootStrategy)
 
         super.init(frame: frame)
 

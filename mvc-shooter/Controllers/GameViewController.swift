@@ -15,14 +15,14 @@ class GameViewController: BaseGameViewController {
     private let model: ScreenModelType
     private let controlsView: ControlsView
     private let battleSceen: BattleScene
-    private let strategyControlsView: StrategyControlsView
+    private let strategyControlsView: StateControlsView
 
     // MARK: - Initializers
 
     init(model: ScreenModelType) {
         self.model = model
         self.controlsView = ControlsView()
-        self.strategyControlsView = StrategyControlsView()
+        self.strategyControlsView = StateControlsView()
         self.battleSceen = BattleScene(model: model)
 
         super.init(nibName: nil, bundle: nil)
