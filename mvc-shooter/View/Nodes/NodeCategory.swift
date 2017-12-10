@@ -8,14 +8,11 @@
 
 import Foundation
 
-enum NodeCategory {
-    case bird
+enum NodeCategory: Int {
+    case bird = 1
     case pig
 
     var identifier: UInt32 {
-        switch self {
-        case .bird: return 0x1 << 1
-        case .pig: return 0x1 << 2
-        }
+        return 0x1 << rawValue
     }
 }

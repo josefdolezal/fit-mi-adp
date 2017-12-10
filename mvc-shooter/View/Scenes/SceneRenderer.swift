@@ -72,6 +72,10 @@ class SceneRenderer: GameObjectVisitor {
             birdNodes.append(node)
             scene.addChild(node)
             node.physicsBody?.applyImpulse(.init(dx: model.force(), dy: model.directionAngle()))
+            node.run(SKAction.sequence([
+                SKAction.wait(forDuration: 5),
+                SKAction.run { [weak self, weak node] in guard let node = node else { return }; self?.scene?.clearOffscreenNode(node) }
+            ]))
             return node
         }
 

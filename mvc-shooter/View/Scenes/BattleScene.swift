@@ -10,8 +10,9 @@ import SpriteKit
 
 class BattleScene: SKScene, ScreenModelObserver, SKPhysicsContactDelegate {
 
-    private let model: ScreenModelType
     lazy var sceneRenderer = SceneRenderer(scene: self)
+
+    private let model: ScreenModelType
 
     // MARK: - Initializers
 
@@ -42,6 +43,11 @@ class BattleScene: SKScene, ScreenModelObserver, SKPhysicsContactDelegate {
         let point = Point(x: Int(location.x), y: Int(location.y))
 
         model.spawnBird(direction: point)
+    }
+
+    func clearOffscreenNode(_ node: BirdNode) {
+        node.removeFromParent()
+        model.destroyBird(node.model)
     }
 
     // MARK: - ScreenModelObserver
