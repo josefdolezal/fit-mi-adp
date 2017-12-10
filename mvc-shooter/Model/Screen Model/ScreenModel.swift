@@ -17,7 +17,9 @@ class ScreenModel: ScreenModelType, GameObjectModelVisitable {
     private var pigs: [PigModel]
 
     init(configuration: ScreenModelConfiguration) {
-        self.cannon = CannonModel(cannon: Cannon(location: .init(x: 20, y: Int(configuration.sceneHeight/2))))
+        self.cannon = CannonModel(
+            cannon: Cannon(location: Point(x: 20, y: Int(configuration.sceneHeight / 2))),
+            shootingStrategy: configuration.shootingStrategy)
         self.observers = []
         self.pigs = []
         self.configuration = configuration

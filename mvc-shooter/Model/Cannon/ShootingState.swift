@@ -7,5 +7,6 @@
 //
 
 protocol ShootingState {
-    func shoot(from location: Point, in direction: Point, boundary width: Int, height: Int) -> [BirdModel]
+    func shoot(from location: Point, in direction: Point, strategy: ShootingStrategy,
+               boundary width: Int, height: Int) -> [BirdModel]
 }

@@ -11,6 +11,8 @@ import Foundation
 class CannonModel: GameObjectModelVisitable {
 
     private let cannon: Cannon
+    private let shootingStrategy: ShootingStrategy
+
     private var birds = [BirdModel]()
     private var shootingState: ShootingState = MultiShootState()
 
@@ -18,8 +20,9 @@ class CannonModel: GameObjectModelVisitable {
         static let step = 5
     }
 
-    init(cannon: Cannon) {
+    init(cannon: Cannon, shootingStrategy: ShootingStrategy) {
         self.cannon = cannon
+        self.shootingStrategy = shootingStrategy
     }
 
     // - MARK: Location API
@@ -39,7 +42,7 @@ class CannonModel: GameObjectModelVisitable {
     }
 
     func shootBird(in direction: Point, widthBoundary: Int, heightBoundary: Int) {
-        let newBirds = shootingState.shoot(from: cannon.location, in: direction,
+        let newBirds = shootingState.shoot(from: cannon.location, in: direction, strategy: shootingStrategy,
                                            boundary: widthBoundary, height: heightBoundary)
 
         birds.append(contentsOf: newBirds)

@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let configuration = ScreenModelConfiguration(
             maximumPigsCount: 10,
             pigsSpawnFrequency: 3,
+            shootingStrategy: BalisticShootingStrategy(),
             sceneWidth: Int(UIScreen.main.bounds.width),
             sceneHeight: Int(UIScreen.main.bounds.height))
         let model = ScreenModel(configuration: configuration)
