@@ -33,6 +33,10 @@ protocol ScreenModelType: class, GameObjectModelVisitable {
 
     func destroyBird(_ model: BirdModel)
 
+    // MARK: - Cannon API
+
+    func useShootingState(_ shootingState: ShootingState)
+
     // MARK: - Observable API
 
     func add(observer: ScreenModelObserver)

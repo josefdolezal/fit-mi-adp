@@ -82,6 +82,12 @@ class ScreenModel: ScreenModelType, GameObjectModelVisitable {
         cannon.destroyBird(model)
     }
 
+    // MARK: - Cannon API
+
+    func useShootingState(_ shootingState: ShootingState) {
+        cannon.useShootingState(shootingState)
+    }
+
     // MARK: - Observable API
 
     func add(observer: ScreenModelObserver) {

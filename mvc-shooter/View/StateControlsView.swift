@@ -46,8 +46,8 @@ class StateControlsView: UIView {
         button.setImage(asset.image, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            button.widthAnchor.constraint(equalToConstant: 40),
-            button.heightAnchor.constraint(equalToConstant: 40)
+            button.widthAnchor.constraint(equalToConstant: 55),
+            button.heightAnchor.constraint(equalToConstant: 55)
         ])
 
         return button

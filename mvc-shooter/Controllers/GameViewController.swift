@@ -12,6 +12,11 @@ import GameplayKit
 
 class GameViewController: BaseGameViewController {
 
+    struct ShootingStates {
+        static let singleShoot = SingleShootState()
+        static let multiShoot = MultiShootState()
+    }
+
     private let model: ScreenModelType
     private let controlsView: ControlsView
     private let battleSceen: BattleScene
@@ -98,13 +103,13 @@ class GameViewController: BaseGameViewController {
     }
 
     @objc
-    func multiShootStrategyTapped() {
-
+    func singleShootStrategyTapped() {
+        model.useShootingState(ShootingStates.singleShoot)
     }
 
     @objc
-    func singleShootStrategyTapped() {
-
+    func multiShootStrategyTapped() {
+        model.useShootingState(ShootingStates.multiShoot)
     }
 
     // MARK: - Private API
@@ -115,7 +120,7 @@ class GameViewController: BaseGameViewController {
         controlsView.upButton.addTarget(self, action: #selector(upButtonTapped), for: .touchUpInside)
         controlsView.downButton.addTarget(self, action: #selector(downButtonTapped), for: .touchUpInside)
 
-        strategyControlsView.multiShootButton.addTarget(self, action: #selector(singleShootStrategyTapped), for: .touchUpInside)
         strategyControlsView.singleShootButton.addTarget(self, action: #selector(singleShootStrategyTapped), for: .touchUpInside)
+        strategyControlsView.multiShootButton.addTarget(self, action: #selector(multiShootStrategyTapped), for: .touchUpInside)
     }
 }
