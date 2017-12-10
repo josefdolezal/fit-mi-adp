@@ -29,7 +29,7 @@
 		D24F634D1FDC2CAB002287CE /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F634C1FDC2CAB002287CE /* Vector.swift */; };
 		D24F63501FDC99E2002287CE /* ShootingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F634F1FDC99E2002287CE /* ShootingState.swift */; };
 		D24F63521FDC9A79002287CE /* SingleShootState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F63511FDC9A79002287CE /* SingleShootState.swift */; };
-		D24F63541FDC9AC0002287CE /* MultiShootStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F63531FDC9AC0002287CE /* MultiShootStrategy.swift */; };
+		D24F63541FDC9AC0002287CE /* MultiShootState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F63531FDC9AC0002287CE /* MultiShootState.swift */; };
 		D24F63561FDC9F79002287CE /* StateControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F63551FDC9F79002287CE /* StateControlsView.swift */; };
 		D26029BB1FA76E0C00CF49E7 /* ScreenModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26029BA1FA76E0C00CF49E7 /* ScreenModelType.swift */; };
 		D26029BE1FA7C6D100CF49E7 /* ScreenModelObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26029BD1FA7C6D100CF49E7 /* ScreenModelObserver.swift */; };
@@ -79,7 +79,7 @@
 		D24F634C1FDC2CAB002287CE /* Vector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vector.swift; sourceTree = "<group>"; };
 		D24F634F1FDC99E2002287CE /* ShootingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShootingState.swift; sourceTree = "<group>"; };
 		D24F63511FDC9A79002287CE /* SingleShootState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleShootState.swift; sourceTree = "<group>"; };
-		D24F63531FDC9AC0002287CE /* MultiShootStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiShootStrategy.swift; sourceTree = "<group>"; };
+		D24F63531FDC9AC0002287CE /* MultiShootState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiShootState.swift; sourceTree = "<group>"; };
 		D24F63551FDC9F79002287CE /* StateControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateControlsView.swift; sourceTree = "<group>"; };
 		D26029BA1FA76E0C00CF49E7 /* ScreenModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModelType.swift; sourceTree = "<group>"; };
 		D26029BD1FA7C6D100CF49E7 /* ScreenModelObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModelObserver.swift; sourceTree = "<group>"; };
@@ -158,7 +158,7 @@
 				D2C156821FA733A2009BFB28 /* CanonModel.swift */,
 				D24F634F1FDC99E2002287CE /* ShootingState.swift */,
 				D24F63511FDC9A79002287CE /* SingleShootState.swift */,
-				D24F63531FDC9AC0002287CE /* MultiShootStrategy.swift */,
+				D24F63531FDC9AC0002287CE /* MultiShootState.swift */,
 			);
 			path = Cannon;
 			sourceTree = "<group>";
@@ -459,7 +459,7 @@
 				D2F345791F86AF1500ED4E6A /* AppDelegate.swift in Sources */,
 				D26029BE1FA7C6D100CF49E7 /* ScreenModelObserver.swift in Sources */,
 				D2C682CF1FDAFCB0002487CF /* Point.swift in Sources */,
-				D24F63541FDC9AC0002287CE /* MultiShootStrategy.swift in Sources */,
+				D24F63541FDC9AC0002287CE /* MultiShootState.swift in Sources */,
 				D2D2A2371F87EF2D002F2D62 /* BaseGameViewController.swift in Sources */,
 				D2C682D21FDB00CB002487CF /* Random.swift in Sources */,
 				D2C156891FA73499009BFB28 /* Bird.swift in Sources */,

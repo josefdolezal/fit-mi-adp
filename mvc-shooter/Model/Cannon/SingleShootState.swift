@@ -14,11 +14,15 @@ struct SingleShootState: ShootingState {
     }
 
     func shoot(from location: Point, in direction: Point, boundary width: Int, height: Int) -> [BirdModel] {
-        let impulse = Vector(
-            dx: (Double(direction.x) / Double(width) * Impulse.maxX),
-            dy: (Double(direction.y) / Double(height) * Impulse.maxY))
+        let impulse = shootImpulse(in: direction, width: width, height: height)
         let birdModel = BirdModel(bird: Bird(location: location), impuls: impulse)
 
         return [birdModel]
+    }
+
+    private func shootImpulse(in direction: Point, width: Int, height: Int) -> Vector {
+        return Vector(
+            dx: (Double(direction.x) / Double(width)) * Impulse.maxX,
+            dy: (Double(direction.y) / Double(height)) * Impulse.maxY)
     }
 }

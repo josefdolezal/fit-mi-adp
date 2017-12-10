@@ -12,7 +12,7 @@ class CannonModel: GameObjectModelVisitable {
 
     private let cannon: Cannon
     private var birds = [BirdModel]()
-    private var shootingState: ShootingState = SingleShootState()
+    private var shootingState: ShootingState = MultiShootState()
 
     private enum Constants {
         static let step = 5
