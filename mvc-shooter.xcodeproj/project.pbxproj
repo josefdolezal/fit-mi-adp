@@ -60,6 +60,7 @@
 		D2F345941F86AF1500ED4E6A /* mvc_shooterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F345931F86AF1500ED4E6A /* mvc_shooterTests.swift */; };
 		D2FBAF491FDDEA8400B361A5 /* ShootingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FBAF481FDDEA8400B361A5 /* ShootingStrategy.swift */; };
 		D2FBAF4B1FDDEC5800B361A5 /* BalisticShootingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FBAF4A1FDDEC5800B361A5 /* BalisticShootingStrategy.swift */; };
+		D2FBAF4D1FDDF90000B361A5 /* ThrowShootingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FBAF4C1FDDF90000B361A5 /* ThrowShootingStrategy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,7 @@
 		D2F345951F86AF1500ED4E6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2FBAF481FDDEA8400B361A5 /* ShootingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShootingStrategy.swift; sourceTree = "<group>"; };
 		D2FBAF4A1FDDEC5800B361A5 /* BalisticShootingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalisticShootingStrategy.swift; sourceTree = "<group>"; };
+		D2FBAF4C1FDDF90000B361A5 /* ThrowShootingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThrowShootingStrategy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 				D24F63531FDC9AC0002287CE /* MultiShootState.swift */,
 				D2FBAF481FDDEA8400B361A5 /* ShootingStrategy.swift */,
 				D2FBAF4A1FDDEC5800B361A5 /* BalisticShootingStrategy.swift */,
+				D2FBAF4C1FDDF90000B361A5 /* ThrowShootingStrategy.swift */,
 			);
 			path = Cannon;
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2FBAF4D1FDDF90000B361A5 /* ThrowShootingStrategy.swift in Sources */,
 				D20A7A241FA9226100DD88F0 /* ControlsView.swift in Sources */,
 				D2B2DABA1FDA951E0023C5BF /* PigNode.swift in Sources */,
 				D20E332F1F896F250039A027 /* CGPoint+Distance.swift in Sources */,
