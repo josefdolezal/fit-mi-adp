@@ -61,6 +61,7 @@
 		D2FBAF491FDDEA8400B361A5 /* ShootingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FBAF481FDDEA8400B361A5 /* ShootingStrategy.swift */; };
 		D2FBAF4B1FDDEC5800B361A5 /* BalisticShootingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FBAF4A1FDDEC5800B361A5 /* BalisticShootingStrategy.swift */; };
 		D2FBAF4D1FDDF90000B361A5 /* ThrowShootingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FBAF4C1FDDF90000B361A5 /* ThrowShootingStrategy.swift */; };
+		D2FBAF4F1FDDFA7600B361A5 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FBAF4E1FDDFA7600B361A5 /* Environment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,7 @@
 		D2FBAF481FDDEA8400B361A5 /* ShootingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShootingStrategy.swift; sourceTree = "<group>"; };
 		D2FBAF4A1FDDEC5800B361A5 /* BalisticShootingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalisticShootingStrategy.swift; sourceTree = "<group>"; };
 		D2FBAF4C1FDDF90000B361A5 /* ThrowShootingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThrowShootingStrategy.swift; sourceTree = "<group>"; };
+		D2FBAF4E1FDDFA7600B361A5 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				D2C682D11FDB00CB002487CF /* Random.swift */,
+				D2FBAF4E1FDDFA7600B361A5 /* Environment.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -454,6 +457,7 @@
 				D2C156871FA73401009BFB28 /* PigModel.swift in Sources */,
 				D24F63521FDC9A79002287CE /* SingleShootState.swift in Sources */,
 				D24F634D1FDC2CAB002287CE /* Vector.swift in Sources */,
+				D2FBAF4F1FDDFA7600B361A5 /* Environment.swift in Sources */,
 				D2C1567D1FA73301009BFB28 /* GameObject.swift in Sources */,
 				D26FE4B71FCAF99C0023B71D /* GameObjectModelVisitable.swift in Sources */,
 				D2C1568B1FA734B0009BFB28 /* BirdModel.swift in Sources */,
