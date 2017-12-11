@@ -13,8 +13,8 @@ import GameplayKit
 class GameViewController: BaseGameViewController, BattleSceneDelegate {
 
     struct ShootingStates {
-        static let singleShoot = SingleShootState()
-        static let multiShoot = MultiShootState()
+        static let singleShoot = SingleShootState(factory: Environment.current.objectsFactory)
+        static let multiShoot = MultiShootState(factory: Environment.current.objectsFactory)
     }
 
     private let model: ScreenModelType

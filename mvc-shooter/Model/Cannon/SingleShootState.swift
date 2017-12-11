@@ -7,12 +7,10 @@
 //
 
 struct SingleShootState: ShootingState {
-    func shoot(from location: Point, in direction: Point, strategy: ShootingStrategy,
-               boundary width: Int, height: Int) -> [BirdModel] {
 
-        let impulse = strategy.impulse(in: direction, boundary: width, height: height)
-        let birdModel = BirdModel(bird: Bird(location: location), impuls: impulse)
+    var factory: ObjectsFactory
 
-        return [birdModel]
+    func shoot(from location: Point, in direction: Point, boundary width: Int, height: Int) -> [BirdModel] {
+        return [factory.bird(location: location, in: direction, boundary: width, height: height)]
     }
 }

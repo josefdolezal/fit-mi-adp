@@ -19,7 +19,7 @@ class ScreenModel: ScreenModelType, GameObjectModelVisitable {
     init(configuration: ScreenModelConfiguration) {
         self.cannon = CannonModel(
             cannon: Cannon(location: Point(x: 20, y: Int(configuration.sceneHeight / 2))),
-            shootingStrategy: configuration.shootingStrategy)
+            shootingState: SingleShootState(factory: configuration.objectsFactory))
         self.observers = []
         self.pigs = []
         self.configuration = configuration
@@ -56,9 +56,8 @@ class ScreenModel: ScreenModelType, GameObjectModelVisitable {
     func spawnPig() {
         guard pigs.count < configuration.maximumPigsCount else { return }
 
-        let randomX = Random.next(upperBound: configuration.sceneWidth)
-        let randomY = Random.next(upperBound: configuration.sceneHeight)
-        let pigModel = PigModel(pig: Pig(x: randomX, y: randomY))
+        let pigModel = configuration.objectsFactory.pig(boundary: configuration.sceneWidth,
+                                                        height: configuration.sceneHeight)
 
         pigs.append(pigModel)
 

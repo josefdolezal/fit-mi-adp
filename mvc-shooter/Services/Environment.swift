@@ -22,10 +22,13 @@ class Environment: Decodable {
 
     let configuration: String
 
-    var shootingStrategy: ShootingStrategy {
-        return configuration == "Simple" ? ThrowShootingStrategy() : BalisticShootingStrategy()
-    }
+    var objectsFactory: ObjectsFactory {
+        if configuration == "Simple" {
+            return SimpleObjectsFactory()
+        }
 
+        return RealisticObjectsFactory()
+    }
 }
 
 extension Environment {

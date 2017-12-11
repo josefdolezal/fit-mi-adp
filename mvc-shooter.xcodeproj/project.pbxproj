@@ -31,6 +31,9 @@
 		D24F63521FDC9A79002287CE /* SingleShootState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F63511FDC9A79002287CE /* SingleShootState.swift */; };
 		D24F63541FDC9AC0002287CE /* MultiShootState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F63531FDC9AC0002287CE /* MultiShootState.swift */; };
 		D24F63561FDC9F79002287CE /* StateControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F63551FDC9F79002287CE /* StateControlsView.swift */; };
+		D25FA0D51FDF351D001F32D9 /* ObjectsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25FA0D41FDF351D001F32D9 /* ObjectsFactory.swift */; };
+		D25FA0D71FDF36E8001F32D9 /* RealisticObjectsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25FA0D61FDF36E8001F32D9 /* RealisticObjectsFactory.swift */; };
+		D25FA0D91FDF3FD5001F32D9 /* SimpleObjectsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25FA0D81FDF3FD5001F32D9 /* SimpleObjectsFactory.swift */; };
 		D26029BB1FA76E0C00CF49E7 /* ScreenModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26029BA1FA76E0C00CF49E7 /* ScreenModelType.swift */; };
 		D26029BE1FA7C6D100CF49E7 /* ScreenModelObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26029BD1FA7C6D100CF49E7 /* ScreenModelObserver.swift */; };
 		D26029C11FA7C7D900CF49E7 /* ScreenModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26029C01FA7C7D900CF49E7 /* ScreenModelTests.swift */; };
@@ -86,6 +89,9 @@
 		D24F63511FDC9A79002287CE /* SingleShootState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleShootState.swift; sourceTree = "<group>"; };
 		D24F63531FDC9AC0002287CE /* MultiShootState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiShootState.swift; sourceTree = "<group>"; };
 		D24F63551FDC9F79002287CE /* StateControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateControlsView.swift; sourceTree = "<group>"; };
+		D25FA0D41FDF351D001F32D9 /* ObjectsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectsFactory.swift; sourceTree = "<group>"; };
+		D25FA0D61FDF36E8001F32D9 /* RealisticObjectsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealisticObjectsFactory.swift; sourceTree = "<group>"; };
+		D25FA0D81FDF3FD5001F32D9 /* SimpleObjectsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleObjectsFactory.swift; sourceTree = "<group>"; };
 		D26029BA1FA76E0C00CF49E7 /* ScreenModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModelType.swift; sourceTree = "<group>"; };
 		D26029BD1FA7C6D100CF49E7 /* ScreenModelObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModelObserver.swift; sourceTree = "<group>"; };
 		D26029C01FA7C7D900CF49E7 /* ScreenModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModelTests.swift; sourceTree = "<group>"; };
@@ -176,6 +182,16 @@
 			path = Cannon;
 			sourceTree = "<group>";
 		};
+		D25FA0D31FDF3509001F32D9 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				D25FA0D41FDF351D001F32D9 /* ObjectsFactory.swift */,
+				D25FA0D61FDF36E8001F32D9 /* RealisticObjectsFactory.swift */,
+				D25FA0D81FDF3FD5001F32D9 /* SimpleObjectsFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
 		D26029BF1FA7C7BE00CF49E7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +236,7 @@
 		D2C1567B1FA732E2009BFB28 /* Game Objects */ = {
 			isa = PBXGroup;
 			children = (
+				D25FA0D31FDF3509001F32D9 /* Factory */,
 				D2C1567C1FA73301009BFB28 /* GameObject.swift */,
 				D2C156841FA733E5009BFB28 /* Pig.swift */,
 				D2C156861FA73401009BFB28 /* PigModel.swift */,
@@ -463,6 +480,7 @@
 				D24F634D1FDC2CAB002287CE /* Vector.swift in Sources */,
 				D2FBAF4F1FDDFA7600B361A5 /* Environment.swift in Sources */,
 				D2C1567D1FA73301009BFB28 /* GameObject.swift in Sources */,
+				D25FA0D71FDF36E8001F32D9 /* RealisticObjectsFactory.swift in Sources */,
 				D26FE4B71FCAF99C0023B71D /* GameObjectModelVisitable.swift in Sources */,
 				D2C1568B1FA734B0009BFB28 /* BirdModel.swift in Sources */,
 				D2C156851FA733E5009BFB28 /* Pig.swift in Sources */,
@@ -479,7 +497,9 @@
 				D2F345791F86AF1500ED4E6A /* AppDelegate.swift in Sources */,
 				D26029BE1FA7C6D100CF49E7 /* ScreenModelObserver.swift in Sources */,
 				D2C682CF1FDAFCB0002487CF /* Point.swift in Sources */,
+				D25FA0D91FDF3FD5001F32D9 /* SimpleObjectsFactory.swift in Sources */,
 				D24F63541FDC9AC0002287CE /* MultiShootState.swift in Sources */,
+				D25FA0D51FDF351D001F32D9 /* ObjectsFactory.swift in Sources */,
 				D2D2A2371F87EF2D002F2D62 /* BaseGameViewController.swift in Sources */,
 				D2C682D21FDB00CB002487CF /* Random.swift in Sources */,
 				D2C156891FA73499009BFB28 /* Bird.swift in Sources */,

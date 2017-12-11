@@ -10,12 +10,16 @@ import Foundation
 
 struct MultiShootState: ShootingState {
 
-    private let singleShoot = SingleShootState()
+    private let singleShoot: SingleShootState
 
-    func shoot(from location: Point, in direction: Point, strategy: ShootingStrategy, boundary width: Int, height: Int) -> [BirdModel] {
+    init(factory: ObjectsFactory) {
+        self.singleShoot = SingleShootState(factory: factory)
+    }
+
+    func shoot(from location: Point, in direction: Point, boundary width: Int, height: Int) -> [BirdModel] {
         let birds = [{ $0 + 50 }, { $0 - 50 }]
             .map { modify(direction: direction, using: $0) }
-            .flatMap { singleShoot.shoot(from: location, in: $0, strategy: strategy, boundary: width, height: height) }
+            .flatMap { singleShoot.shoot(from: location, in: $0, boundary: width, height: height) }
 
         return birds
     }

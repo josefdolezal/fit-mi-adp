@@ -11,7 +11,7 @@ import Foundation
 struct ScreenModelConfiguration {
     var maximumPigsCount: Int
     var pigsSpawnFrequency: TimeInterval
-    var shootingStrategy: ShootingStrategy
+    var objectsFactory: ObjectsFactory
 
     var sceneWidth: Int
     var sceneHeight: Int
