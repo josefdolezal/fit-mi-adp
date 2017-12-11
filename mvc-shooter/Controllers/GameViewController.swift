@@ -21,6 +21,7 @@ class GameViewController: BaseGameViewController, BattleSceneDelegate {
     private let controlsView: ControlsView
     private let battleSceen: BattleScene
     private let strategyControlsView: StateControlsView
+    private let scoreLabel: UILabel
 
     // MARK: - Initializers
 
@@ -28,6 +29,7 @@ class GameViewController: BaseGameViewController, BattleSceneDelegate {
         self.model = model
         self.controlsView = ControlsView()
         self.strategyControlsView = StateControlsView()
+        self.scoreLabel = UILabel()
         self.battleSceen = BattleScene(model: model)
 
         super.init(nibName: nil, bundle: nil)
@@ -51,13 +53,24 @@ class GameViewController: BaseGameViewController, BattleSceneDelegate {
             controlsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15)
         ])
 
+        // MARK: Score label
+
+        view.addSubview(scoreLabel)
+        scoreLabel.translatesAutoresizingMaskIntoConstraints = false
+        scoreLabel.textAlignment = .right
+        scoreLabel.textColor = .white
+        NSLayoutConstraint.activate([
+            scoreLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 15),
+            scoreLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15)
+        ])
+
         // MARK: StrategyControlsView
 
         view.addSubview(strategyControlsView)
         strategyControlsView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            strategyControlsView.topAnchor.constraint(equalTo: view.topAnchor, constant: 15),
-            strategyControlsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15)
+            strategyControlsView.topAnchor.constraint(equalTo: scoreLabel.bottomAnchor, constant: 15),
+            strategyControlsView.trailingAnchor.constraint(equalTo: scoreLabel.trailingAnchor)
         ])
 
         // MARK: BattleScene & SKView
@@ -79,6 +92,7 @@ class GameViewController: BaseGameViewController, BattleSceneDelegate {
         model.configuration.sceneWidth = Int(battleSceen.size.width)
 
         bindControls()
+        updateScoreLabel()
     }
 
     // MARK: - BattleSceneDelegate
@@ -106,6 +120,9 @@ class GameViewController: BaseGameViewController, BattleSceneDelegate {
     func battleScene(collidate birdModel: BirdModel, with pigModel: PigModel) {
         model.destroyBird(birdModel)
         model.destroyPig(pigModel)
+
+        ScoreManager.shared.incrementScore()
+        updateScoreLabel()
     }
 
     // MARK: - UI Callbacks
@@ -150,5 +167,9 @@ class GameViewController: BaseGameViewController, BattleSceneDelegate {
 
         strategyControlsView.singleShootButton.addTarget(self, action: #selector(singleShootStrategyTapped), for: .touchUpInside)
         strategyControlsView.multiShootButton.addTarget(self, action: #selector(multiShootStrategyTapped), for: .touchUpInside)
+    }
+
+    private func updateScoreLabel() {
+        scoreLabel.text = "Current score: \(ScoreManager.shared.current)"
     }
 }
