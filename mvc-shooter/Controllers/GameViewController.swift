@@ -10,7 +10,7 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
-class GameViewController: BaseGameViewController {
+class GameViewController: BaseGameViewController, BattleSceneDelegate {
 
     struct ShootingStates {
         static let singleShoot = SingleShootState()
@@ -62,6 +62,7 @@ class GameViewController: BaseGameViewController {
 
         // MARK: BattleScene & SKView
 
+        battleSceen.battleSceneDelegate = self
         skView.showsNodeCount = true
         skView.showsFPS = true
         skView.contentMode = .scaleAspectFill
@@ -78,6 +79,33 @@ class GameViewController: BaseGameViewController {
         model.configuration.sceneWidth = Int(battleSceen.size.width)
 
         bindControls()
+    }
+
+    // MARK: - BattleSceneDelegate
+
+    func battleSceneShouldSpawnPig() {
+        model.spawnPig()
+    }
+
+    func battleScene(shouldClear pigModel: PigModel) {
+        model.destroyPig(pigModel)
+    }
+
+    func battleScene(shouldClear birdModel: BirdModel) {
+        model.destroyBird(birdModel)
+    }
+
+    func battleScene(didChangeCannonDirection direction: Point) {
+        model.spawnBird(direction: direction)
+    }
+
+    func battleSceneSpawnInterval() -> TimeInterval {
+        return model.configuration.pigsSpawnFrequency
+    }
+
+    func battleScene(collidate birdModel: BirdModel, with pigModel: PigModel) {
+        model.destroyBird(birdModel)
+        model.destroyPig(pigModel)
     }
 
     // MARK: - UI Callbacks

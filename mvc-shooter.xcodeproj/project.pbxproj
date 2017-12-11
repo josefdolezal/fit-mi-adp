@@ -62,6 +62,7 @@
 		D2FBAF4B1FDDEC5800B361A5 /* BalisticShootingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FBAF4A1FDDEC5800B361A5 /* BalisticShootingStrategy.swift */; };
 		D2FBAF4D1FDDF90000B361A5 /* ThrowShootingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FBAF4C1FDDF90000B361A5 /* ThrowShootingStrategy.swift */; };
 		D2FBAF4F1FDDFA7600B361A5 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FBAF4E1FDDFA7600B361A5 /* Environment.swift */; };
+		D2FBAF511FDE7DE400B361A5 /* BattleSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FBAF501FDE7DE400B361A5 /* BattleSceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +121,7 @@
 		D2FBAF4A1FDDEC5800B361A5 /* BalisticShootingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalisticShootingStrategy.swift; sourceTree = "<group>"; };
 		D2FBAF4C1FDDF90000B361A5 /* ThrowShootingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThrowShootingStrategy.swift; sourceTree = "<group>"; };
 		D2FBAF4E1FDDFA7600B361A5 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		D2FBAF501FDE7DE400B361A5 /* BattleSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleSceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +200,7 @@
 			children = (
 				D2B2DAC21FDACAE20023C5BF /* BattleScene.swift */,
 				D24F633E1FDBEF9C002287CE /* SceneRenderer.swift */,
+				D2FBAF501FDE7DE400B361A5 /* BattleSceneDelegate.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				D26FE4B51FCAF7FE0023B71D /* GameObjectVisitor.swift in Sources */,
 				D24F63421FDC01EB002287CE /* ScreenModelConfiguration.swift in Sources */,
 				D2C156871FA73401009BFB28 /* PigModel.swift in Sources */,
+				D2FBAF511FDE7DE400B361A5 /* BattleSceneDelegate.swift in Sources */,
 				D24F63521FDC9A79002287CE /* SingleShootState.swift in Sources */,
 				D24F634D1FDC2CAB002287CE /* Vector.swift in Sources */,
 				D2FBAF4F1FDDFA7600B361A5 /* Environment.swift in Sources */,

@@ -10,8 +10,9 @@ import SpriteKit
 
 class BattleScene: SKScene, ScreenModelObserver, SKPhysicsContactDelegate {
 
-    lazy var sceneRenderer = SceneRenderer(scene: self)
+    weak var battleSceneDelegate: BattleSceneDelegate?
 
+    private lazy var sceneRenderer = SceneRenderer(scene: self)
     private let model: ScreenModelType
 
     // MARK: - Initializers
@@ -42,12 +43,12 @@ class BattleScene: SKScene, ScreenModelObserver, SKPhysicsContactDelegate {
         let location = touch.location(in: self)
         let point = Point(x: Int(location.x), y: Int(location.y))
 
-        model.spawnBird(direction: point)
+        battleSceneDelegate?.battleScene(didChangeCannonDirection: point)
     }
 
     func clearOffscreenNode(_ node: BirdNode) {
         node.removeFromParent()
-        model.destroyBird(node.model)
+        battleSceneDelegate?.battleScene(shouldClear: node.model)
     }
 
     // MARK: - ScreenModelObserver
@@ -79,12 +80,14 @@ class BattleScene: SKScene, ScreenModelObserver, SKPhysicsContactDelegate {
     // MARK: - Private API
 
     private func setup() {
+        let spawnInterval = battleSceneDelegate?.battleSceneSpawnInterval() ?? .infinity
+
         physicsWorld.contactDelegate = self
         model.add(observer: self)
 
         // Spawn automatically new enemies
         let spawnAction = SKAction.repeatForever(SKAction.sequence([
-            SKAction.wait(forDuration: model.configuration.pigsSpawnFrequency),
+            SKAction.wait(forDuration: spawnInterval),
             SKAction.run(spawnPig)
         ]))
 
@@ -92,12 +95,11 @@ class BattleScene: SKScene, ScreenModelObserver, SKPhysicsContactDelegate {
     }
 
     private func spawnPig() {
-        model.spawnPig()
+        battleSceneDelegate?.battleSceneShouldSpawnPig()
     }
 
     private func makeCollision(between bird: BirdNode, and pig: PigNode) {
-        model.destroyPig(pig.model)
-        model.destroyBird(bird.model)
+        battleSceneDelegate?.battleScene(collidate: bird.model, with: pig.model)
 
         pig.removeFromParent()
         bird.removeFromParent()
