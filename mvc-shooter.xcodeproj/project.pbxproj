@@ -34,6 +34,7 @@
 		D25FA0D51FDF351D001F32D9 /* ObjectsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25FA0D41FDF351D001F32D9 /* ObjectsFactory.swift */; };
 		D25FA0D71FDF36E8001F32D9 /* RealisticObjectsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25FA0D61FDF36E8001F32D9 /* RealisticObjectsFactory.swift */; };
 		D25FA0D91FDF3FD5001F32D9 /* SimpleObjectsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25FA0D81FDF3FD5001F32D9 /* SimpleObjectsFactory.swift */; };
+		D25FA0DB1FDF4423001F32D9 /* ScoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25FA0DA1FDF4423001F32D9 /* ScoreManager.swift */; };
 		D26029BB1FA76E0C00CF49E7 /* ScreenModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26029BA1FA76E0C00CF49E7 /* ScreenModelType.swift */; };
 		D26029BE1FA7C6D100CF49E7 /* ScreenModelObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26029BD1FA7C6D100CF49E7 /* ScreenModelObserver.swift */; };
 		D26029C11FA7C7D900CF49E7 /* ScreenModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26029C01FA7C7D900CF49E7 /* ScreenModelTests.swift */; };
@@ -92,6 +93,7 @@
 		D25FA0D41FDF351D001F32D9 /* ObjectsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectsFactory.swift; sourceTree = "<group>"; };
 		D25FA0D61FDF36E8001F32D9 /* RealisticObjectsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealisticObjectsFactory.swift; sourceTree = "<group>"; };
 		D25FA0D81FDF3FD5001F32D9 /* SimpleObjectsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleObjectsFactory.swift; sourceTree = "<group>"; };
+		D25FA0DA1FDF4423001F32D9 /* ScoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreManager.swift; sourceTree = "<group>"; };
 		D26029BA1FA76E0C00CF49E7 /* ScreenModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModelType.swift; sourceTree = "<group>"; };
 		D26029BD1FA7C6D100CF49E7 /* ScreenModelObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModelObserver.swift; sourceTree = "<group>"; };
 		D26029C01FA7C7D900CF49E7 /* ScreenModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModelTests.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 			children = (
 				D2C682D11FDB00CB002487CF /* Random.swift */,
 				D2FBAF4E1FDDFA7600B361A5 /* Environment.swift */,
+				D25FA0DA1FDF4423001F32D9 /* ScoreManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -480,6 +483,7 @@
 				D24F634D1FDC2CAB002287CE /* Vector.swift in Sources */,
 				D2FBAF4F1FDDFA7600B361A5 /* Environment.swift in Sources */,
 				D2C1567D1FA73301009BFB28 /* GameObject.swift in Sources */,
+				D25FA0DB1FDF4423001F32D9 /* ScoreManager.swift in Sources */,
 				D25FA0D71FDF36E8001F32D9 /* RealisticObjectsFactory.swift in Sources */,
 				D26FE4B71FCAF99C0023B71D /* GameObjectModelVisitable.swift in Sources */,
 				D2C1568B1FA734B0009BFB28 /* BirdModel.swift in Sources */,
