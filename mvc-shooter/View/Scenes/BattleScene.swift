@@ -57,6 +57,12 @@ class BattleScene: SKScene, ScreenModelObserver, SKPhysicsContactDelegate {
         battleSceneDelegate?.battleScene(shouldClear: node.model)
     }
 
+    // MARK: Public API
+
+    func clearScene() {
+        sceneRenderer.removeAllObjects()
+    }
+
     // MARK: - ScreenModelObserver
 
     func modelChanged() {

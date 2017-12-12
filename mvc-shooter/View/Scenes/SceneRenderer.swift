@@ -21,6 +21,19 @@ class SceneRenderer: GameObjectVisitor {
         self.scene = scene
     }
 
+    // MARK: - Public API
+
+    func removeAllObjects() {
+        cannonNode?.removeFromParent()
+        cannonNode = nil
+
+        pigNodes.forEach { $0.removeFromParent() }
+        pigNodes.removeAll()
+
+        birdNodes.forEach { $0.removeFromParent() }
+        birdNodes.removeAll()
+    }
+
     // MARK: - GameObjectVisitor
 
     func visit(object: CannonModel) {

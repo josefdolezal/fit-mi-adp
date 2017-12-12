@@ -144,5 +144,7 @@ class ScreenModel: ScreenModelType, GameObjectModelVisitable {
 
         self.cannon = save.cannon
         self.pigs = save.pigs
+
+        notifyObservers()
     }
 }

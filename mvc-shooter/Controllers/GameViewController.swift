@@ -162,6 +162,11 @@ class GameViewController: BaseGameViewController, BattleSceneDelegate {
         model.enqueue(command: ChangeShootingState(model: model, shootingState: ShootingStates.multiShoot))
     }
 
+    @objc
+    func undoButtonTapped() {
+        model.enqueue(command: UndoCommand(model: model))
+    }
+
     // MARK: - Private API
 
     private func bindControls() {
@@ -169,6 +174,7 @@ class GameViewController: BaseGameViewController, BattleSceneDelegate {
         controlsView.rightButton.addTarget(self, action: #selector(rightButtonTapped), for: .touchUpInside)
         controlsView.upButton.addTarget(self, action: #selector(upButtonTapped), for: .touchUpInside)
         controlsView.downButton.addTarget(self, action: #selector(downButtonTapped), for: .touchUpInside)
+        controlsView.revertButton.addTarget(self, action: #selector(undoButtonTapped), for: .touchUpInside)
 
         strategyControlsView.singleShootButton.addTarget(self, action: #selector(singleShootStrategyTapped), for: .touchUpInside)
         strategyControlsView.multiShootButton.addTarget(self, action: #selector(multiShootStrategyTapped), for: .touchUpInside)

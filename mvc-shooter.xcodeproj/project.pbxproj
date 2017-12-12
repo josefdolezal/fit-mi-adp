@@ -67,6 +67,7 @@
 		D2C1568B1FA734B0009BFB28 /* BirdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C1568A1FA734B0009BFB28 /* BirdModel.swift */; };
 		D2C682CF1FDAFCB0002487CF /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C682CE1FDAFCB0002487CF /* Point.swift */; };
 		D2C682D21FDB00CB002487CF /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C682D11FDB00CB002487CF /* Random.swift */; };
+		D2CCF2D91FE09C16004D77F5 /* UndoCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CCF2D81FE09C16004D77F5 /* UndoCommand.swift */; };
 		D2D2A2371F87EF2D002F2D62 /* BaseGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2A2361F87EF2D002F2D62 /* BaseGameViewController.swift */; };
 		D2D2A23F1F895769002F2D62 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2A23E1F895769002F2D62 /* Images.swift */; };
 		D2F345791F86AF1500ED4E6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F345781F86AF1500ED4E6A /* AppDelegate.swift */; };
@@ -139,6 +140,7 @@
 		D2C1568A1FA734B0009BFB28 /* BirdModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdModel.swift; sourceTree = "<group>"; };
 		D2C682CE1FDAFCB0002487CF /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 		D2C682D11FDB00CB002487CF /* Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
+		D2CCF2D81FE09C16004D77F5 /* UndoCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UndoCommand.swift; sourceTree = "<group>"; };
 		D2D2A2361F87EF2D002F2D62 /* BaseGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseGameViewController.swift; sourceTree = "<group>"; };
 		D2D2A23E1F895769002F2D62 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		D2F345751F86AF1500ED4E6A /* mvc-shooter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mvc-shooter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -203,6 +205,7 @@
 				D2600CCA1FDFD02F00038C48 /* RemovePigCommand.swift */,
 				D28DF0B81FDFD12D00506263 /* CreatePigCommand.swift */,
 				D28DF0BA1FDFD28800506263 /* ChangeShootingStateCommand.swift */,
+				D2CCF2D81FE09C16004D77F5 /* UndoCommand.swift */,
 			);
 			path = Commands;
 			sourceTree = "<group>";
@@ -530,6 +533,7 @@
 				D2B2DAB61FDA95000023C5BF /* CannonNode.swift in Sources */,
 				D26029BB1FA76E0C00CF49E7 /* ScreenModelType.swift in Sources */,
 				D2B2DAC31FDACAE20023C5BF /* BattleScene.swift in Sources */,
+				D2CCF2D91FE09C16004D77F5 /* UndoCommand.swift in Sources */,
 				D2B2DAB81FDA95130023C5BF /* BirdNode.swift in Sources */,
 				D26FE4B51FCAF7FE0023B71D /* GameObjectVisitor.swift in Sources */,
 				D24F63421FDC01EB002287CE /* ScreenModelConfiguration.swift in Sources */,
