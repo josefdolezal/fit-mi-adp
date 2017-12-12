@@ -23,6 +23,8 @@
 /* Begin PBXBuildFile section */
 		D20332421FE07F1500EC08B9 /* ScreenModelCommandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20332411FE07F1500EC08B9 /* ScreenModelCommandTests.swift */; };
 		D20332451FE07F5E00EC08B9 /* BlockCommandMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20332441FE07F5E00EC08B9 /* BlockCommandMock.swift */; };
+		D20332491FE081A800EC08B9 /* ObjectsVisitorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20332481FE081A800EC08B9 /* ObjectsVisitorMock.swift */; };
+		D203324D1FE082D200EC08B9 /* ScreenModelVisitorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D203324C1FE082D200EC08B9 /* ScreenModelVisitorTests.swift */; };
 		D20A7A241FA9226100DD88F0 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20A7A231FA9226100DD88F0 /* ControlsView.swift */; };
 		D20E332F1F896F250039A027 /* CGPoint+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E332E1F896F250039A027 /* CGPoint+Distance.swift */; };
 		D22043931FDFC833000B655C /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22043921FDFC833000B655C /* Command.swift */; };
@@ -43,7 +45,6 @@
 		D2600CCB1FDFD02F00038C48 /* RemovePigCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2600CCA1FDFD02F00038C48 /* RemovePigCommand.swift */; };
 		D26029BB1FA76E0C00CF49E7 /* ScreenModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26029BA1FA76E0C00CF49E7 /* ScreenModelType.swift */; };
 		D26029BE1FA7C6D100CF49E7 /* ScreenModelObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26029BD1FA7C6D100CF49E7 /* ScreenModelObserver.swift */; };
-		D26029C11FA7C7D900CF49E7 /* ScreenModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26029C01FA7C7D900CF49E7 /* ScreenModelTests.swift */; };
 		D26FE4B51FCAF7FE0023B71D /* GameObjectVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26FE4B41FCAF7FE0023B71D /* GameObjectVisitor.swift */; };
 		D26FE4B71FCAF99C0023B71D /* GameObjectModelVisitable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26FE4B61FCAF99C0023B71D /* GameObjectModelVisitable.swift */; };
 		D28DF0B91FDFD12D00506263 /* CreatePigCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28DF0B81FDFD12D00506263 /* CreatePigCommand.swift */; };
@@ -92,6 +93,8 @@
 /* Begin PBXFileReference section */
 		D20332411FE07F1500EC08B9 /* ScreenModelCommandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModelCommandTests.swift; sourceTree = "<group>"; };
 		D20332441FE07F5E00EC08B9 /* BlockCommandMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockCommandMock.swift; sourceTree = "<group>"; };
+		D20332481FE081A800EC08B9 /* ObjectsVisitorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectsVisitorMock.swift; sourceTree = "<group>"; };
+		D203324C1FE082D200EC08B9 /* ScreenModelVisitorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModelVisitorTests.swift; sourceTree = "<group>"; };
 		D20A7A231FA9226100DD88F0 /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
 		D20E332E1F896F250039A027 /* CGPoint+Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Distance.swift"; sourceTree = "<group>"; };
 		D22043921FDFC833000B655C /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
@@ -112,7 +115,6 @@
 		D2600CCA1FDFD02F00038C48 /* RemovePigCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemovePigCommand.swift; sourceTree = "<group>"; };
 		D26029BA1FA76E0C00CF49E7 /* ScreenModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModelType.swift; sourceTree = "<group>"; };
 		D26029BD1FA7C6D100CF49E7 /* ScreenModelObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModelObserver.swift; sourceTree = "<group>"; };
-		D26029C01FA7C7D900CF49E7 /* ScreenModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModelTests.swift; sourceTree = "<group>"; };
 		D26FE4B41FCAF7FE0023B71D /* GameObjectVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObjectVisitor.swift; sourceTree = "<group>"; };
 		D26FE4B61FCAF99C0023B71D /* GameObjectModelVisitable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObjectModelVisitable.swift; sourceTree = "<group>"; };
 		D28DF0B81FDFD12D00506263 /* CreatePigCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePigCommand.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				D20332441FE07F5E00EC08B9 /* BlockCommandMock.swift */,
+				D20332481FE081A800EC08B9 /* ObjectsVisitorMock.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -240,8 +243,8 @@
 		D26029BF1FA7C7BE00CF49E7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D26029C01FA7C7D900CF49E7 /* ScreenModelTests.swift */,
 				D20332411FE07F1500EC08B9 /* ScreenModelCommandTests.swift */,
+				D203324C1FE082D200EC08B9 /* ScreenModelVisitorTests.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -571,9 +574,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D26029C11FA7C7D900CF49E7 /* ScreenModelTests.swift in Sources */,
+				D203324D1FE082D200EC08B9 /* ScreenModelVisitorTests.swift in Sources */,
 				D20332451FE07F5E00EC08B9 /* BlockCommandMock.swift in Sources */,
 				D20332421FE07F1500EC08B9 /* ScreenModelCommandTests.swift in Sources */,
+				D20332491FE081A800EC08B9 /* ObjectsVisitorMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
