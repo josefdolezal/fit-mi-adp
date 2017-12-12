@@ -9,5 +9,10 @@
 import Foundation
 
 class Bird: GameObject {
-    
+
+    // MARK: Deep copy
+
+    func copy() -> Bird {
+        return Bird(location: location)
+    }
 }

@@ -9,5 +9,9 @@
 import Foundation
 
 class Cannon: GameObject {
+    // MARK: Deep copy
 
+    func copy() -> Cannon {
+        return Cannon(location: location)
+    }
 }

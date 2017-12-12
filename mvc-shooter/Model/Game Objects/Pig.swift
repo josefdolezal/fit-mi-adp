@@ -10,4 +10,9 @@ import Foundation
 
 class Pig: GameObject {
 
+    // MARK: Deep copy
+
+    func copy() -> Pig {
+        return Pig(location: location)
+    }
 }

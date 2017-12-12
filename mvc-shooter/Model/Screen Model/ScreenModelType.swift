@@ -50,4 +50,10 @@ protocol ScreenModelType: class, GameObjectModelVisitable {
     // MARK: - Commands API
 
     func enqueue(command: Command)
+
+    // MARK: - Save game API
+
+    func save() -> Any
+
+    func load(from data: Any)
 }

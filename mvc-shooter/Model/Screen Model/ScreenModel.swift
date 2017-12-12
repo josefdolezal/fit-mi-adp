@@ -10,10 +10,15 @@ import CoreGraphics
 
 class ScreenModel: ScreenModelType, GameObjectModelVisitable {
 
+    private struct GameSave {
+        let cannon: CannonModel
+        let pigs: [PigModel]
+    }
+
     var configuration: ScreenModelConfiguration
 
     private var observers: [ScreenModelObserver]
-    private let cannon: CannonModel
+    private var cannon: CannonModel
     private var pigs: [PigModel]
     private var commands = [Command]()
 
@@ -125,5 +130,18 @@ class ScreenModel: ScreenModelType, GameObjectModelVisitable {
     func accept(visitor: GameObjectVisitor) {
         cannon.accept(visitor: visitor)
         pigs.forEach { $0.accept(visitor: visitor) }
+    }
+
+    // MARK: - Save game API
+
+    func save() -> Any {
+        return GameSave(cannon: cannon.copy(), pigs: pigs.map { $0.copy() })
+    }
+
+    func load(from data: Any) {
+        guard let save = data as? GameSave else { return }
+
+        self.cannon = save.cannon
+        self.pigs = save.pigs
     }
 }

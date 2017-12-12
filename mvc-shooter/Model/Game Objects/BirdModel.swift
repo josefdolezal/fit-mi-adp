@@ -49,4 +49,10 @@ class BirdModel: GameObjectModelVisitable, Equatable {
     static func ==(lhs: BirdModel, rhs: BirdModel) -> Bool {
         return lhs === rhs
     }
+
+    // MARK: - Deep copy
+
+    func copy() -> BirdModel {
+        return BirdModel(bird: bird.copy(), impuls: impuls)
+    }
 }

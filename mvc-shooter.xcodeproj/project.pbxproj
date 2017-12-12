@@ -74,6 +74,7 @@
 		D2F345861F86AF1500ED4E6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2F345851F86AF1500ED4E6A /* Assets.xcassets */; };
 		D2F345891F86AF1500ED4E6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2F345871F86AF1500ED4E6A /* LaunchScreen.storyboard */; };
 		D2F495D21FE085AC001F5AD0 /* ScreenModelObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F495D11FE085AC001F5AD0 /* ScreenModelObserverTests.swift */; };
+		D2F495D41FE08992001F5AD0 /* SaveGameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F495D31FE08992001F5AD0 /* SaveGameManager.swift */; };
 		D2FBAF491FDDEA8400B361A5 /* ShootingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FBAF481FDDEA8400B361A5 /* ShootingStrategy.swift */; };
 		D2FBAF4B1FDDEC5800B361A5 /* BalisticShootingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FBAF4A1FDDEC5800B361A5 /* BalisticShootingStrategy.swift */; };
 		D2FBAF4D1FDDF90000B361A5 /* ThrowShootingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FBAF4C1FDDF90000B361A5 /* ThrowShootingStrategy.swift */; };
@@ -149,6 +150,7 @@
 		D2F3458F1F86AF1500ED4E6A /* mvc-shooterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mvc-shooterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F345951F86AF1500ED4E6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2F495D11FE085AC001F5AD0 /* ScreenModelObserverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModelObserverTests.swift; sourceTree = "<group>"; };
+		D2F495D31FE08992001F5AD0 /* SaveGameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveGameManager.swift; sourceTree = "<group>"; };
 		D2FBAF481FDDEA8400B361A5 /* ShootingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShootingStrategy.swift; sourceTree = "<group>"; };
 		D2FBAF4A1FDDEC5800B361A5 /* BalisticShootingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalisticShootingStrategy.swift; sourceTree = "<group>"; };
 		D2FBAF4C1FDDF90000B361A5 /* ThrowShootingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThrowShootingStrategy.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 				D22043911FDFC81D000B655C /* Commands */,
 				D2C682CE1FDAFCB0002487CF /* Point.swift */,
 				D24F634C1FDC2CAB002287CE /* Vector.swift */,
+				D2F495D31FE08992001F5AD0 /* SaveGameManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -519,6 +522,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2F495D41FE08992001F5AD0 /* SaveGameManager.swift in Sources */,
 				D2FBAF4D1FDDF90000B361A5 /* ThrowShootingStrategy.swift in Sources */,
 				D20A7A241FA9226100DD88F0 /* ControlsView.swift in Sources */,
 				D2B2DABA1FDA951E0023C5BF /* PigNode.swift in Sources */,

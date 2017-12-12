@@ -106,4 +106,16 @@ class ScreenModelProxy: ScreenModelType {
 //        loggingService.log(message: "Accepting visiton.")
         model.accept(visitor: visitor)
     }
+
+    // MARK: Save game API
+
+    func save() -> Any {
+        loggingService.log(message: "Creating save.")
+        return model.save()
+    }
+
+    func load(from data: Any) {
+        loggingService.log(message: "Loading save.")
+        model.load(from: data)
+    }
 }

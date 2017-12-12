@@ -74,4 +74,14 @@ class CannonModel: GameObjectModelVisitable {
 
         birds.forEach { $0.accept(visitor: visitor) }
     }
+
+    // MARK: - Deep copy
+
+    func copy() -> CannonModel {
+        let newCannon = CannonModel(cannon: cannon.copy(), shootingState: shootingState)
+
+        newCannon.birds = birds.map { $0.copy() }
+
+        return newCannon
+    }
 }

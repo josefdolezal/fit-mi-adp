@@ -36,4 +36,10 @@ class PigModel: GameObjectModelVisitable, Equatable {
     public static func ==(lhs: PigModel, rhs: PigModel) -> Bool {
         return lhs === rhs
     }
+
+    // MARK: Deep copy
+
+    func copy() -> PigModel {
+        return PigModel(pig: pig.copy())
+    }
 }
