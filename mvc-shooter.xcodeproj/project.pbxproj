@@ -47,6 +47,7 @@
 		D26FE4B71FCAF99C0023B71D /* GameObjectModelVisitable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26FE4B61FCAF99C0023B71D /* GameObjectModelVisitable.swift */; };
 		D28DF0B91FDFD12D00506263 /* CreatePigCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28DF0B81FDFD12D00506263 /* CreatePigCommand.swift */; };
 		D28DF0BB1FDFD28800506263 /* ChangeShootingStateCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28DF0BA1FDFD28800506263 /* ChangeShootingStateCommand.swift */; };
+		D28DF0BD1FDFD54800506263 /* ScreenModelProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28DF0BC1FDFD54800506263 /* ScreenModelProxy.swift */; };
 		D28DF0BF1FDFD63500506263 /* LogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28DF0BE1FDFD63500506263 /* LogService.swift */; };
 		D28DF0C11FDFD65D00506263 /* CommandLineLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28DF0C01FDFD65D00506263 /* CommandLineLog.swift */; };
 		D2B2DAB61FDA95000023C5BF /* CannonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B2DAB51FDA95000023C5BF /* CannonNode.swift */; };
@@ -115,6 +116,7 @@
 		D26FE4B61FCAF99C0023B71D /* GameObjectModelVisitable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObjectModelVisitable.swift; sourceTree = "<group>"; };
 		D28DF0B81FDFD12D00506263 /* CreatePigCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePigCommand.swift; sourceTree = "<group>"; };
 		D28DF0BA1FDFD28800506263 /* ChangeShootingStateCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeShootingStateCommand.swift; sourceTree = "<group>"; };
+		D28DF0BC1FDFD54800506263 /* ScreenModelProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModelProxy.swift; sourceTree = "<group>"; };
 		D28DF0BE1FDFD63500506263 /* LogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogService.swift; sourceTree = "<group>"; };
 		D28DF0C01FDFD65D00506263 /* CommandLineLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineLog.swift; sourceTree = "<group>"; };
 		D2B2DAB51FDA95000023C5BF /* CannonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CannonNode.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				D26029BA1FA76E0C00CF49E7 /* ScreenModelType.swift */,
 				D26029BD1FA7C6D100CF49E7 /* ScreenModelObserver.swift */,
 				D24F63411FDC01EB002287CE /* ScreenModelConfiguration.swift */,
+				D28DF0BC1FDFD54800506263 /* ScreenModelProxy.swift */,
 			);
 			path = "Screen Model";
 			sourceTree = "<group>";
@@ -551,6 +554,7 @@
 				D2600CC91FDFCFC400038C48 /* RemoveBirdCommand.swift in Sources */,
 				D2C682D21FDB00CB002487CF /* Random.swift in Sources */,
 				D2C156891FA73499009BFB28 /* Bird.swift in Sources */,
+				D28DF0BD1FDFD54800506263 /* ScreenModelProxy.swift in Sources */,
 				D2B2DABE1FDA98800023C5BF /* NodeCategory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

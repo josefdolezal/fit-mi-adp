@@ -21,8 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             objectsFactory: Environment.current.objectsFactory,
             sceneWidth: Int(UIScreen.main.bounds.width),
             sceneHeight: Int(UIScreen.main.bounds.height))
+        let loggingService = CommandLineLog()
         let model = ScreenModel(configuration: configuration)
-        let controller = GameViewController(model: model)
+        let loggingModel = ScreenModelProxy(configuration: configuration, model: model, loggingService: loggingService)
+        let controller = GameViewController(model: loggingModel)
 
         window.rootViewController = controller
         window.makeKeyAndVisible()
