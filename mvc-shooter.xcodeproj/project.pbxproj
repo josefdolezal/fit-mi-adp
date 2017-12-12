@@ -21,9 +21,10 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		D20332421FE07F1500EC08B9 /* ScreenModelCommandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20332411FE07F1500EC08B9 /* ScreenModelCommandTests.swift */; };
+		D20332451FE07F5E00EC08B9 /* BlockCommandMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20332441FE07F5E00EC08B9 /* BlockCommandMock.swift */; };
 		D20A7A241FA9226100DD88F0 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20A7A231FA9226100DD88F0 /* ControlsView.swift */; };
 		D20E332F1F896F250039A027 /* CGPoint+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E332E1F896F250039A027 /* CGPoint+Distance.swift */; };
-		D20E33331F8971A40039A027 /* CGPoint+DistanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E33321F8971A40039A027 /* CGPoint+DistanceTests.swift */; };
 		D22043931FDFC833000B655C /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22043921FDFC833000B655C /* Command.swift */; };
 		D22043951FDFC86D000B655C /* MoveCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22043941FDFC86D000B655C /* MoveCommand.swift */; };
 		D22043971FDFCE3E000B655C /* ShootCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22043961FDFCE3E000B655C /* ShootCommand.swift */; };
@@ -71,7 +72,6 @@
 		D2F345811F86AF1500ED4E6A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F345801F86AF1500ED4E6A /* GameViewController.swift */; };
 		D2F345861F86AF1500ED4E6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2F345851F86AF1500ED4E6A /* Assets.xcassets */; };
 		D2F345891F86AF1500ED4E6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2F345871F86AF1500ED4E6A /* LaunchScreen.storyboard */; };
-		D2F345941F86AF1500ED4E6A /* mvc_shooterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F345931F86AF1500ED4E6A /* mvc_shooterTests.swift */; };
 		D2FBAF491FDDEA8400B361A5 /* ShootingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FBAF481FDDEA8400B361A5 /* ShootingStrategy.swift */; };
 		D2FBAF4B1FDDEC5800B361A5 /* BalisticShootingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FBAF4A1FDDEC5800B361A5 /* BalisticShootingStrategy.swift */; };
 		D2FBAF4D1FDDF90000B361A5 /* ThrowShootingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FBAF4C1FDDF90000B361A5 /* ThrowShootingStrategy.swift */; };
@@ -90,9 +90,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D20332411FE07F1500EC08B9 /* ScreenModelCommandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModelCommandTests.swift; sourceTree = "<group>"; };
+		D20332441FE07F5E00EC08B9 /* BlockCommandMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockCommandMock.swift; sourceTree = "<group>"; };
 		D20A7A231FA9226100DD88F0 /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
 		D20E332E1F896F250039A027 /* CGPoint+Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Distance.swift"; sourceTree = "<group>"; };
-		D20E33321F8971A40039A027 /* CGPoint+DistanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+DistanceTests.swift"; sourceTree = "<group>"; };
 		D22043921FDFC833000B655C /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		D22043941FDFC86D000B655C /* MoveCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveCommand.swift; sourceTree = "<group>"; };
 		D22043961FDFCE3E000B655C /* ShootCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShootCommand.swift; sourceTree = "<group>"; };
@@ -143,7 +144,6 @@
 		D2F345881F86AF1500ED4E6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2F3458A1F86AF1500ED4E6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2F3458F1F86AF1500ED4E6A /* mvc-shooterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mvc-shooterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2F345931F86AF1500ED4E6A /* mvc_shooterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mvc_shooterTests.swift; sourceTree = "<group>"; };
 		D2F345951F86AF1500ED4E6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2FBAF481FDDEA8400B361A5 /* ShootingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShootingStrategy.swift; sourceTree = "<group>"; };
 		D2FBAF4A1FDDEC5800B361A5 /* BalisticShootingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalisticShootingStrategy.swift; sourceTree = "<group>"; };
@@ -170,6 +170,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D20332431FE07F4900EC08B9 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				D20332441FE07F5E00EC08B9 /* BlockCommandMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		D20E332B1F895D730039A027 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				D26029C01FA7C7D900CF49E7 /* ScreenModelTests.swift */,
+				D20332411FE07F1500EC08B9 /* ScreenModelCommandTests.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -372,10 +381,9 @@
 		D2F345921F86AF1500ED4E6A /* mvc-shooterTests */ = {
 			isa = PBXGroup;
 			children = (
+				D20332431FE07F4900EC08B9 /* Mock */,
 				D26029BF1FA7C7BE00CF49E7 /* Model */,
-				D2F345931F86AF1500ED4E6A /* mvc_shooterTests.swift */,
 				D2F345951F86AF1500ED4E6A /* Info.plist */,
-				D20E33321F8971A40039A027 /* CGPoint+DistanceTests.swift */,
 			);
 			path = "mvc-shooterTests";
 			sourceTree = "<group>";
@@ -563,9 +571,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2F345941F86AF1500ED4E6A /* mvc_shooterTests.swift in Sources */,
-				D20E33331F8971A40039A027 /* CGPoint+DistanceTests.swift in Sources */,
 				D26029C11FA7C7D900CF49E7 /* ScreenModelTests.swift in Sources */,
+				D20332451FE07F5E00EC08B9 /* BlockCommandMock.swift in Sources */,
+				D20332421FE07F1500EC08B9 /* ScreenModelCommandTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
