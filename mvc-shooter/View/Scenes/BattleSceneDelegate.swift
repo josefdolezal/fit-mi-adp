@@ -16,9 +16,11 @@ protocol BattleSceneDelegate: class {
 
     func battleScene(shouldClear birdModel: BirdModel)
 
+    func battleScene(collidate birdModel: BirdModel, with pigModel: PigModel)
+
     func battleSceneShouldSpawnPig()
 
     func battleSceneSpawnInterval() -> TimeInterval
 
-    func battleScene(collidate birdModel: BirdModel, with pigModel: PigModel)
+    func battleSceneWillRender()
 }

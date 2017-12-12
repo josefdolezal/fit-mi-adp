@@ -117,6 +117,10 @@ class GameViewController: BaseGameViewController, BattleSceneDelegate {
         return model.configuration.pigsSpawnFrequency
     }
 
+    func battleSceneWillRender() {
+        model.refresh()
+    }
+
     func battleScene(collidate birdModel: BirdModel, with pigModel: PigModel) {
         model.destroyBird(birdModel)
         model.destroyPig(pigModel)

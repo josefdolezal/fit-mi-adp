@@ -24,6 +24,7 @@
 		D20A7A241FA9226100DD88F0 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20A7A231FA9226100DD88F0 /* ControlsView.swift */; };
 		D20E332F1F896F250039A027 /* CGPoint+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E332E1F896F250039A027 /* CGPoint+Distance.swift */; };
 		D20E33331F8971A40039A027 /* CGPoint+DistanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E33321F8971A40039A027 /* CGPoint+DistanceTests.swift */; };
+		D22043931FDFC833000B655C /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22043921FDFC833000B655C /* Command.swift */; };
 		D24F633F1FDBEF9C002287CE /* SceneRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F633E1FDBEF9C002287CE /* SceneRenderer.swift */; };
 		D24F63421FDC01EB002287CE /* ScreenModelConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F63411FDC01EB002287CE /* ScreenModelConfiguration.swift */; };
 		D24F634D1FDC2CAB002287CE /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F634C1FDC2CAB002287CE /* Vector.swift */; };
@@ -83,6 +84,7 @@
 		D20A7A231FA9226100DD88F0 /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
 		D20E332E1F896F250039A027 /* CGPoint+Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Distance.swift"; sourceTree = "<group>"; };
 		D20E33321F8971A40039A027 /* CGPoint+DistanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+DistanceTests.swift"; sourceTree = "<group>"; };
+		D22043921FDFC833000B655C /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		D24F633E1FDBEF9C002287CE /* SceneRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneRenderer.swift; sourceTree = "<group>"; };
 		D24F63411FDC01EB002287CE /* ScreenModelConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModelConfiguration.swift; sourceTree = "<group>"; };
 		D24F634C1FDC2CAB002287CE /* Vector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vector.swift; sourceTree = "<group>"; };
@@ -158,6 +160,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		D22043911FDFC81D000B655C /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				D22043921FDFC833000B655C /* Command.swift */,
+			);
+			path = Commands;
+			sourceTree = "<group>";
+		};
 		D24F63401FDC01C9002287CE /* Screen Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +239,7 @@
 				D24F63401FDC01C9002287CE /* Screen Model */,
 				D2C1567B1FA732E2009BFB28 /* Game Objects */,
 				D24F634E1FDC9980002287CE /* Cannon */,
+				D22043911FDFC81D000B655C /* Commands */,
 				D2C682CE1FDAFCB0002487CF /* Point.swift */,
 				D24F634C1FDC2CAB002287CE /* Vector.swift */,
 			);
@@ -478,6 +489,7 @@
 				D26FE4B51FCAF7FE0023B71D /* GameObjectVisitor.swift in Sources */,
 				D24F63421FDC01EB002287CE /* ScreenModelConfiguration.swift in Sources */,
 				D2C156871FA73401009BFB28 /* PigModel.swift in Sources */,
+				D22043931FDFC833000B655C /* Command.swift in Sources */,
 				D2FBAF511FDE7DE400B361A5 /* BattleSceneDelegate.swift in Sources */,
 				D24F63521FDC9A79002287CE /* SingleShootState.swift in Sources */,
 				D24F634D1FDC2CAB002287CE /* Vector.swift in Sources */,

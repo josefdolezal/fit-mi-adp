@@ -42,4 +42,12 @@ protocol ScreenModelType: class, GameObjectModelVisitable {
     func add(observer: ScreenModelObserver)
 
     func remove(observer: ScreenModelObserver)
+
+    // MARK: - Time API
+
+    func refresh()
+
+    // MARK: - Commands API
+
+    func enqueue(command: Command)
 }

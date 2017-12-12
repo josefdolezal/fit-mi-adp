@@ -15,6 +15,7 @@ class ScreenModel: ScreenModelType, GameObjectModelVisitable {
     private var observers: [ScreenModelObserver]
     private let cannon: CannonModel
     private var pigs: [PigModel]
+    private var commands = [Command]()
 
     init(configuration: ScreenModelConfiguration) {
         self.cannon = CannonModel(
@@ -103,7 +104,23 @@ class ScreenModel: ScreenModelType, GameObjectModelVisitable {
         observers.forEach { $0.modelChanged() }
     }
 
-    // MARK: GameObjectModelVisitable
+    // MARK: - Commands API
+
+    func enqueue(command: Command) {
+        commands.append(command)
+    }
+
+    // MARK: - Time API
+
+    func refresh() {
+        while !commands.isEmpty {
+            let command = commands.removeFirst()
+
+            command.execute()
+        }
+    }
+
+    // MARK: - GameObjectModelVisitable
 
     func accept(visitor: GameObjectVisitor) {
         cannon.accept(visitor: visitor)

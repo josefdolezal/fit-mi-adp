@@ -35,6 +35,10 @@ class BattleScene: SKScene, ScreenModelObserver, SKPhysicsContactDelegate {
         setup()
     }
 
+    override func update(_ currentTime: TimeInterval) {
+        battleSceneDelegate?.battleSceneWillRender()
+    }
+
     // MARK: - User interaction
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
