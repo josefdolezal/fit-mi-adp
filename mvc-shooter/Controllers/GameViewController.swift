@@ -164,6 +164,7 @@ class GameViewController: BaseGameViewController, BattleSceneDelegate {
 
     @objc
     func undoButtonTapped() {
+        battleSceen.clearScene()
         model.enqueue(command: UndoCommand(model: model))
     }
 
