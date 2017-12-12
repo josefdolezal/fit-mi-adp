@@ -10,6 +10,11 @@ import Foundation
 
 class RealisticObjectsFactory: ObjectsFactory {
 
+    struct Offsets {
+        static let x = 30
+        static let y = 100
+    }
+
     private let strategy = BalisticShootingStrategy()
 
     func bird(location: Point, in direction: Point, boundary width: Int, height: Int) -> BirdModel {
@@ -19,9 +24,9 @@ class RealisticObjectsFactory: ObjectsFactory {
     }
 
     func pig(boundary width: Int, height: Int) -> PigModel {
-        let randomX = Random.next(upperBound: width)
-        let randomY = Random.next(upperBound: height)
-
+        let randomX = Random.next(upperBound: width - (2 * Offsets.x)) + Offsets.x
+        let randomY = Random.next(upperBound: height - (2 * Offsets.y)) + Offsets.y
+        
         return PigModel(pig: Pig(x: randomX, y: randomY))
     }
 }
