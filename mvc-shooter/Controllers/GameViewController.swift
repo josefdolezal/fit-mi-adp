@@ -98,15 +98,15 @@ class GameViewController: BaseGameViewController, BattleSceneDelegate {
     // MARK: - BattleSceneDelegate
 
     func battleSceneShouldSpawnPig() {
-        model.spawnPig()
+        model.enqueue(command: CreatePigCommand(model: model))
     }
 
     func battleScene(shouldClear pigModel: PigModel) {
-        model.destroyPig(pigModel)
+        model.enqueue(command: RemovePigCommand(model: model, pigModel: pigModel))
     }
 
     func battleScene(shouldClear birdModel: BirdModel) {
-        model.destroyBird(birdModel)
+        model.enqueue(command: RemoveBirdCommand(model: model, birdModel: birdModel))
     }
 
     func battleScene(didChangeCannonDirection direction: Point) {
@@ -122,8 +122,8 @@ class GameViewController: BaseGameViewController, BattleSceneDelegate {
     }
 
     func battleScene(collidate birdModel: BirdModel, with pigModel: PigModel) {
-        model.destroyBird(birdModel)
-        model.destroyPig(pigModel)
+        model.enqueue(command: RemoveBirdCommand(model: model, birdModel: birdModel))
+        model.enqueue(command: RemovePigCommand(model: model, pigModel: pigModel))
 
         ScoreManager.shared.incrementScore()
         updateScoreLabel()

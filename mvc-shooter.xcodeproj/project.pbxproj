@@ -38,11 +38,14 @@
 		D25FA0D71FDF36E8001F32D9 /* RealisticObjectsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25FA0D61FDF36E8001F32D9 /* RealisticObjectsFactory.swift */; };
 		D25FA0D91FDF3FD5001F32D9 /* SimpleObjectsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25FA0D81FDF3FD5001F32D9 /* SimpleObjectsFactory.swift */; };
 		D25FA0DB1FDF4423001F32D9 /* ScoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25FA0DA1FDF4423001F32D9 /* ScoreManager.swift */; };
+		D2600CC91FDFCFC400038C48 /* RemoveBirdCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2600CC81FDFCFC400038C48 /* RemoveBirdCommand.swift */; };
+		D2600CCB1FDFD02F00038C48 /* RemovePigCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2600CCA1FDFD02F00038C48 /* RemovePigCommand.swift */; };
 		D26029BB1FA76E0C00CF49E7 /* ScreenModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26029BA1FA76E0C00CF49E7 /* ScreenModelType.swift */; };
 		D26029BE1FA7C6D100CF49E7 /* ScreenModelObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26029BD1FA7C6D100CF49E7 /* ScreenModelObserver.swift */; };
 		D26029C11FA7C7D900CF49E7 /* ScreenModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26029C01FA7C7D900CF49E7 /* ScreenModelTests.swift */; };
 		D26FE4B51FCAF7FE0023B71D /* GameObjectVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26FE4B41FCAF7FE0023B71D /* GameObjectVisitor.swift */; };
 		D26FE4B71FCAF99C0023B71D /* GameObjectModelVisitable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26FE4B61FCAF99C0023B71D /* GameObjectModelVisitable.swift */; };
+		D28DF0B91FDFD12D00506263 /* CreatePigCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28DF0B81FDFD12D00506263 /* CreatePigCommand.swift */; };
 		D2B2DAB61FDA95000023C5BF /* CannonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B2DAB51FDA95000023C5BF /* CannonNode.swift */; };
 		D2B2DAB81FDA95130023C5BF /* BirdNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B2DAB71FDA95130023C5BF /* BirdNode.swift */; };
 		D2B2DABA1FDA951E0023C5BF /* PigNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B2DAB91FDA951E0023C5BF /* PigNode.swift */; };
@@ -100,11 +103,14 @@
 		D25FA0D61FDF36E8001F32D9 /* RealisticObjectsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealisticObjectsFactory.swift; sourceTree = "<group>"; };
 		D25FA0D81FDF3FD5001F32D9 /* SimpleObjectsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleObjectsFactory.swift; sourceTree = "<group>"; };
 		D25FA0DA1FDF4423001F32D9 /* ScoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreManager.swift; sourceTree = "<group>"; };
+		D2600CC81FDFCFC400038C48 /* RemoveBirdCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveBirdCommand.swift; sourceTree = "<group>"; };
+		D2600CCA1FDFD02F00038C48 /* RemovePigCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemovePigCommand.swift; sourceTree = "<group>"; };
 		D26029BA1FA76E0C00CF49E7 /* ScreenModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModelType.swift; sourceTree = "<group>"; };
 		D26029BD1FA7C6D100CF49E7 /* ScreenModelObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModelObserver.swift; sourceTree = "<group>"; };
 		D26029C01FA7C7D900CF49E7 /* ScreenModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModelTests.swift; sourceTree = "<group>"; };
 		D26FE4B41FCAF7FE0023B71D /* GameObjectVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObjectVisitor.swift; sourceTree = "<group>"; };
 		D26FE4B61FCAF99C0023B71D /* GameObjectModelVisitable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObjectModelVisitable.swift; sourceTree = "<group>"; };
+		D28DF0B81FDFD12D00506263 /* CreatePigCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePigCommand.swift; sourceTree = "<group>"; };
 		D2B2DAB51FDA95000023C5BF /* CannonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CannonNode.swift; sourceTree = "<group>"; };
 		D2B2DAB71FDA95130023C5BF /* BirdNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdNode.swift; sourceTree = "<group>"; };
 		D2B2DAB91FDA951E0023C5BF /* PigNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PigNode.swift; sourceTree = "<group>"; };
@@ -170,6 +176,9 @@
 				D22043921FDFC833000B655C /* Command.swift */,
 				D22043941FDFC86D000B655C /* MoveCommand.swift */,
 				D22043961FDFCE3E000B655C /* ShootCommand.swift */,
+				D2600CC81FDFCFC400038C48 /* RemoveBirdCommand.swift */,
+				D2600CCA1FDFD02F00038C48 /* RemovePigCommand.swift */,
+				D28DF0B81FDFD12D00506263 /* CreatePigCommand.swift */,
 			);
 			path = Commands;
 			sourceTree = "<group>";
@@ -505,6 +514,7 @@
 				D25FA0D71FDF36E8001F32D9 /* RealisticObjectsFactory.swift in Sources */,
 				D26FE4B71FCAF99C0023B71D /* GameObjectModelVisitable.swift in Sources */,
 				D2C1568B1FA734B0009BFB28 /* BirdModel.swift in Sources */,
+				D28DF0B91FDFD12D00506263 /* CreatePigCommand.swift in Sources */,
 				D2C156851FA733E5009BFB28 /* Pig.swift in Sources */,
 				D24F633F1FDBEF9C002287CE /* SceneRenderer.swift in Sources */,
 				D2C156811FA73395009BFB28 /* Canon.swift in Sources */,
@@ -520,11 +530,13 @@
 				D2FBAF491FDDEA8400B361A5 /* ShootingStrategy.swift in Sources */,
 				D2F345791F86AF1500ED4E6A /* AppDelegate.swift in Sources */,
 				D26029BE1FA7C6D100CF49E7 /* ScreenModelObserver.swift in Sources */,
+				D2600CCB1FDFD02F00038C48 /* RemovePigCommand.swift in Sources */,
 				D2C682CF1FDAFCB0002487CF /* Point.swift in Sources */,
 				D25FA0D91FDF3FD5001F32D9 /* SimpleObjectsFactory.swift in Sources */,
 				D24F63541FDC9AC0002287CE /* MultiShootState.swift in Sources */,
 				D25FA0D51FDF351D001F32D9 /* ObjectsFactory.swift in Sources */,
 				D2D2A2371F87EF2D002F2D62 /* BaseGameViewController.swift in Sources */,
+				D2600CC91FDFCFC400038C48 /* RemoveBirdCommand.swift in Sources */,
 				D2C682D21FDB00CB002487CF /* Random.swift in Sources */,
 				D2C156891FA73499009BFB28 /* Bird.swift in Sources */,
 				D2B2DABE1FDA98800023C5BF /* NodeCategory.swift in Sources */,
