@@ -153,12 +153,12 @@ class GameViewController: BaseGameViewController, BattleSceneDelegate {
 
     @objc
     func singleShootStrategyTapped() {
-        model.useShootingState(ShootingStates.singleShoot)
+        model.enqueue(command: ChangeShootingState(model: model, shootingState: ShootingStates.singleShoot))
     }
 
     @objc
     func multiShootStrategyTapped() {
-        model.useShootingState(ShootingStates.multiShoot)
+        model.enqueue(command: ChangeShootingState(model: model, shootingState: ShootingStates.multiShoot))
     }
 
     // MARK: - Private API
