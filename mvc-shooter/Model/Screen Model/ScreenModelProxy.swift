@@ -48,6 +48,7 @@ class ScreenModelProxy: ScreenModelType {
 
     func useShootingState(_ shootingState: ShootingState) {
         loggingService.log(message: "Changing shooting state.")
+        model.useShootingState(shootingState)
     }
 
     // MARK: - Pig API
