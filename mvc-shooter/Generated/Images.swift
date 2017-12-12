@@ -50,6 +50,7 @@ enum Asset {
     static let arrowRight = ImageAsset(name: "arrowRight")
     static let arrowTop = ImageAsset(name: "arrowTop")
     static let multiShootStrategy = ImageAsset(name: "multiShootStrategy")
+    static let revertButton = ImageAsset(name: "revertButton")
     static let singleShootStrategy = ImageAsset(name: "singleShootStrategy")
   }
   enum Enemies {
@@ -70,6 +71,7 @@ enum Asset {
     Controls.arrowRight,
     Controls.arrowTop,
     Controls.multiShootStrategy,
+    Controls.revertButton,
     Controls.singleShootStrategy,
     Enemies.piggyDamaged,
     Enemies.piggyHappy,
