@@ -110,7 +110,7 @@ class GameViewController: BaseGameViewController, BattleSceneDelegate {
     }
 
     func battleScene(didChangeCannonDirection direction: Point) {
-        model.spawnBird(direction: direction)
+        model.enqueue(command: ShootCommand(model: model, direction: direction))
     }
 
     func battleSceneSpawnInterval() -> TimeInterval {
