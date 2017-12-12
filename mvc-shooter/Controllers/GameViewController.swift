@@ -133,22 +133,22 @@ class GameViewController: BaseGameViewController, BattleSceneDelegate {
 
     @objc
     func leftButtonTapped() {
-        model.moveCannonLeft()
+        model.enqueue(command: MoveCommand(model: model, direction: .left))
     }
 
     @objc
     func rightButtonTapped() {
-        model.moveCannonRight()
+        model.enqueue(command: MoveCommand(model: model, direction: .right))
     }
 
     @objc
     func upButtonTapped() {
-        model.moveCannonUp()
+        model.enqueue(command: MoveCommand(model: model, direction: .up))
     }
 
     @objc
     func downButtonTapped() {
-        model.moveCannonDown()
+        model.enqueue(command: MoveCommand(model: model, direction: .down))
     }
 
     @objc

@@ -15,10 +15,6 @@ class CannonModel: GameObjectModelVisitable {
     private var birds = [BirdModel]()
     private var shootingState: ShootingState
 
-    private enum Constants {
-        static let step = 5
-    }
-
     init(cannon: Cannon, shootingState: ShootingState) {
         self.cannon = cannon
         self.shootingState = shootingState
@@ -55,20 +51,20 @@ class CannonModel: GameObjectModelVisitable {
 
     // - MARK: Moving API
 
-    func moveCannonLeft() {
-        cannon.location.x -= Constants.step
+    func moveCannonLeft(amount: Int) {
+        cannon.location.x -= amount
     }
 
-    func moveCannonRight() {
-        cannon.location.x += Constants.step
+    func moveCannonRight(amount: Int) {
+        cannon.location.x += amount
     }
 
-    func moveCannonUp() {
-        cannon.location.y += Constants.step
+    func moveCannonUp(amount: Int) {
+        cannon.location.y += amount
     }
 
-    func moveCannonDown() {
-        cannon.location.y -= Constants.step
+    func moveCannonDown(amount: Int) {
+        cannon.location.y -= amount
     }
 
     // MARK: GameObjectVisitable

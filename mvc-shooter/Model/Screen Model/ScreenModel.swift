@@ -28,26 +28,26 @@ class ScreenModel: ScreenModelType, GameObjectModelVisitable {
 
     // MARK: - Cannon API
 
-    func moveCannonLeft() {
-        cannon.moveCannonLeft()
+    func moveCannonLeft(amount: Int) {
+        cannon.moveCannonLeft(amount: amount)
 
         notifyObservers()
     }
 
-    func moveCannonRight() {
-        cannon.moveCannonRight()
+    func moveCannonRight(amount: Int) {
+        cannon.moveCannonRight(amount: amount)
 
         notifyObservers()
     }
 
-    func moveCannonUp() {
-        cannon.moveCannonUp()
+    func moveCannonUp(amount: Int) {
+        cannon.moveCannonUp(amount: amount)
 
         notifyObservers()
     }
 
-    func moveCannonDown() {
-        cannon.moveCannonDown()
+    func moveCannonDown(amount: Int) {
+        cannon.moveCannonDown(amount: amount)
 
         notifyObservers()
     }

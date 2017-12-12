@@ -13,13 +13,13 @@ protocol ScreenModelType: class, GameObjectModelVisitable {
 
     // MARK: - Cannon API
 
-    func moveCannonLeft()
+    func moveCannonLeft(amount: Int)
 
-    func moveCannonRight()
+    func moveCannonRight(amount: Int)
 
-    func moveCannonUp()
+    func moveCannonUp(amount: Int)
     
-    func moveCannonDown()
+    func moveCannonDown(amount: Int)
 
     // MARK: - Piggies API
 
