@@ -121,6 +121,7 @@ class ScreenModel: ScreenModelType, GameObjectModelVisitable {
         while !commands.isEmpty {
             let command = commands.removeFirst()
 
+            SaveGameManager.shared.save(data: save())
             command.execute()
         }
     }

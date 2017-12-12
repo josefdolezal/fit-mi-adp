@@ -93,6 +93,7 @@ class GameViewController: BaseGameViewController, BattleSceneDelegate {
 
         bindControls()
         updateScoreLabel()
+        initiateState()
     }
 
     // MARK: - BattleSceneDelegate
@@ -175,5 +176,11 @@ class GameViewController: BaseGameViewController, BattleSceneDelegate {
 
     private func updateScoreLabel() {
         scoreLabel.text = "Current score: \(ScoreManager.shared.current)"
+    }
+
+    private func initiateState() {
+        (0..<5).forEach { _ in
+            model.enqueue(command: CreatePigCommand(model: model))
+        }
     }
 }
