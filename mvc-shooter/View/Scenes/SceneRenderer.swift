@@ -34,6 +34,10 @@ class SceneRenderer: GameObjectVisitor {
         birdNodes.removeAll()
     }
 
+    func setup() {
+        renderBackground()
+    }
+
     // MARK: - GameObjectVisitor
 
     func visit(object: CannonModel) {
@@ -60,6 +64,13 @@ class SceneRenderer: GameObjectVisitor {
 
     private func renderBird(model: BirdNode) {
         // Custom actions only - handled by scene
+    }
+
+    private func renderBackground() {
+        let node = SKSpriteNode(imageNamed: "background.png")
+        node.position = CGPoint(x: node.size.width / 2, y: node.size.height / 2)
+
+        scene.addChild(node)
     }
 
     // MARK: - Drawing & caching mapping

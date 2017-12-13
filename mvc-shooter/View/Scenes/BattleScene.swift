@@ -33,6 +33,7 @@ class BattleScene: SKScene, ScreenModelObserver, SKPhysicsContactDelegate {
         super.didMove(to: view)
 
         setup()
+        sceneRenderer.setup()
     }
 
     override func update(_ currentTime: TimeInterval) {
