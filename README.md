@@ -1,4 +1,4 @@
-# MI-ADP: Architektury a návrhové vzory
+# MI-ADP: Architektury a návrhové vzory [![Build Status](https://travis-ci.com/josefdolezal/fit-mi-adp.svg?token=AxpSW7yys3aiQpPG9zMW&branch=master)](https://travis-ci.com/josefdolezal/fit-mi-adp)
 
 Repozitář věnovaný semestrální práci předmětu MI-ADP, vyučovaný na FIT ČVUT (@FIT_CTU).
 Seznam materiálů k ostatním předmětům je v [samostatném repozitáři](https://github.com/josefdolezal/fit-cvut).

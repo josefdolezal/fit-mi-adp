@@ -20,7 +20,7 @@ platform :ios do
   desc "Try tu build the app & run all tests"
   desc "This lane is mostly used for CI"
   lane :build do
-    scan
+    scan(scheme: "mvc-shooterTests")
     xcodebuild(
       configuration: "Simple",
       xcargs: "CODE_SIGN_IDENTITY=\"\" CODE_SIGNING_REQUIRED=NO"
