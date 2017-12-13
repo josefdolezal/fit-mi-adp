@@ -113,6 +113,8 @@ class BattleScene: SKScene, ScreenModelObserver, SKPhysicsContactDelegate {
     private func makeCollision(between bird: BirdNode, and pig: PigNode) {
         battleSceneDelegate?.battleScene(collidate: bird.model, with: pig.model)
 
+        run(SKAction.playSoundFileNamed("collision.mp3", waitForCompletion: false))
+
         pig.removeFromParent()
         bird.removeFromParent()
     }

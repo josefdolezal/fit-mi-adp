@@ -86,6 +86,7 @@ class SceneRenderer: GameObjectVisitor {
             scene.addChild(node)
             node.physicsBody?.applyImpulse(.init(dx: model.force(), dy: model.directionAngle()))
             node.run(SKAction.sequence([
+                SKAction.playSoundFileNamed("shooting.mp3", waitForCompletion: false),
                 SKAction.wait(forDuration: 5),
                 SKAction.run { [weak self, weak node] in guard let node = node else { return }; self?.scene?.clearOffscreenNode(node) }
             ]))
